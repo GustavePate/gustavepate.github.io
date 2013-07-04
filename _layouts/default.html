@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="This is gustave pate github.io" />
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width">
+
+        <!-- syntax highlighting CSS -->
+        <link rel="stylesheet" href="/css/syntax.css">
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css">
+
+    </head>
+
+    <body>
+        <div id="page_warp">
+
+        <!-- HEADER -->
+        <div id="header_wrap" class="outer">
+            <header class="inner">
+            <a id="forkme_banner" href="https://github.com/GustavePate/gustavepate.github.io">View on GitHub</a>
+
+            <h1 id="project_title">{{ site.name }}</h1>
+            <h2 id="project_tagline">{{ site.tagline }}</h2>
+            </header>
+        </div>
+
+        <div id="menu_wrap" class="outer">
+            <div class="inner">
+                <div id="menu">
+                    <ul>
+                        <li><a href="/">home</a></li>
+                        {% for cat in site.categories %}
+                        <li><a href="/{{cat[0]}}.html">{{ cat[0] }}</a></li>
+                        {% endfor %}
+                        <li><a href="/atom.xml">atom/rss feed</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- menu inner -->
+        </div><!-- menu_wrap -->
+
+        <!-- MAIN CONTENT -->
+        <div id="main_content_wrap" class="outer">
+            <section id="main_content" class="inner">
+
+                    {{ content }}
+
+            </section>
+   <!--         <section id="right_col_wrap" class="outer">
+   </section>--><!-- right_col_wrap -->
+        </div><!-- main_content -->
+
+
+        <!-- FOOTER -->
+        <div id="footer_wrap" class="outer">
+            <div id="footer" class="inner">
+                <div class="contact">
+                    <p>
+                    Gustave Paté<br />
+                    Human Abstraction Layer<br />
+                    </p>
+                </div>
+                <div class="contact">
+                    <p>
+                    <a href="http://github.com/gustavepate/">github.com/gustavepate</a><br />
+                    </p>
+                </div>
+            </div> <!-- footer -->
+        </div><!-- footer_wrap -->
+    </div> <!-- page warp -->
+    </body>
+</html>
