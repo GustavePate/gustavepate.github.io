@@ -327,11 +327,13 @@ Full-Width Styles
 
 /********* gomenu *********/
 #menu_wrap {
+    width: 100%;
+  background: #eee;
+  border-width: 1px 0px 1px 0px; 
+    border-style: dotted;
 }
 
 #menu_wrap .inner {
-  background: #eee;
-  border: 1px dotted; 
   margin: 0 auto;
   padding: 0.3em 0.3em 0.3em 0.3em;
 }
@@ -342,8 +344,14 @@ Full-Width Styles
 }
 
 #menu ul {
+    display: inline;
     padding: 0px;
     margin: 0px;
+}
+
+#social {
+    padding-left: 1em;
+    float: right;
 }
 
 /********** gofront ********/

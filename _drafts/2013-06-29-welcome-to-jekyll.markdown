@@ -38,7 +38,7 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 a python:
 
 ![a beautiful python][python_logo_id]
-[python_logo_id]: {{ site.url }}/ressources/python-logo.png "Optional title attribute"
+[python_logo_id]: /ressources/python-logo.png "Optional title attribute"
 
 a link to the python [link][python_logo_id]
 
