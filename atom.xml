@@ -8,20 +8,20 @@ layout: nil
     <link href="{{site.url}}"/> 
     <link type="application/atom+xml" rel="self" href="{{site.url}}/atom.xml"/> 
     <updated>{{site.time | date_to_xmlschema }}</updated> 
-    <id>{{site.url}}</id> 
+    <id>{{site.url}}/</id> 
     <author> 
         <name>{{site.author}}</name> 
         <email>{{site.email}}</email> 
     </author> 
     {% for post in site.posts %} 
     <entry> 
-        <id>{{post.title}}</id> 
+        <id>{{post.url}}</id> 
         <link type="text/html" rel="alternate" href="{{post.url }}"/> 
         <title>{{post.title | xml_escape }}</title>
         <updated>{{post.date | date_to_xmlschema }}</updated> 
         <author> 
             <name>{{site.author}}</name> 
-            <uri>{{site.url}}</uri> 
+            <uri>{{site.url}}/</uri> 
         </author> 
         <content type="html">{{post.content | xml_escape }}</content> 
     </entry> 
