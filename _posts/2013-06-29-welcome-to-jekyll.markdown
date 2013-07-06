@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Template post"
+title:  Template Post
 published: true
 tags: template meaningless
 categories: [python, linux]
@@ -33,7 +33,11 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 
 ## reminders of markdown syntax
 
-[Link_to_my_post]({% post_url 2013-06-29-welcome-to-jekyll%})
+* page.id : {{page.id}}
+* page.url : {{page.url}}
+* site url: {{ site.url }}
+
+[Link_to_my_post]({% post_url 2013-07-01-todos%})
 
 a python:
 

@@ -1,0 +1,65 @@
+
+<div id="frontsocial">
+        <span id="fs_twitter"><!-- twitter -->
+        <a href="https://twitter.com/share" class="twitter-share-button"
+            data-url="{{site.url}}{{page.url}}"
+            data-via="{{site.twitter}}"
+            data-lang="en" 
+            data-size="small"
+            data-dnt="true"
+            data-count="horizontal">Tweet</a>
+        </span>
+
+        <span id="fs_gplus">
+            <div class="g-plusone" 
+                data-size="medium"
+                data-annotation="bubble"
+                data-recommandation="false"
+                ></div>
+        </span>
+
+        <span id="fs_facebook">
+            <div class="fb-like" 
+                data-href="{{site.url}}{{page.url}}" 
+                data-send="false"
+                data-layout="button_count" 
+                data-width="300" 
+                data-show-faces="false"
+                data-font="arial">
+            </div>
+        </span>
+
+        <div id="fs_spacer">
+                
+        </div>
+
+        <span id="fs_flattr">
+            <a class="FlattrButton" 
+                title="Hello" 
+                data-flattr-uid="{{site.flattr}}" 
+                data-flattr-title="{{page.url}}" 
+                data-flattr-tags="text, techs" 
+                data-flattr-category="text" 
+                data-flattr-href="{{site.url}}{{page.url}}" 
+                href="{{site.url}}{{page.url}}">
+                Ze Description
+            </a>
+        </span>
+    </div>
+
+<!-- g+ -->
+<script type="text/javascript">
+    window.___gcfg = {
+        lang: 'en-US',
+        parsetags: 'onload'
+
+    };
+    (function() {
+        var po = document.createElement('script'); 
+        po.type = 'text/javascript'; 
+        po.async = true;
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; 
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>

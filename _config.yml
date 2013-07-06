@@ -3,5 +3,11 @@ tagline: Python, Linux, Stuff from outer space
 pygments: true
 timezone: Europe/Paris
 author: Gustave Paté
-email: gustave.pate(at)gmail
-url: http://gustave.pate.github.io
+motto: Human Abstraction Layer
+email: gustave.pate / gmail
+twitter: GustavePate
+googleplus: gustave.pate
+flattr: GustavePate
+github: gustavepate
+url: http://gustavepate.github.io
+permalink: /blog/:year:month:day/:title/

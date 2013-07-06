@@ -10,20 +10,25 @@ layout: default
     <li>stuff ]</li>
     </ul>
     <h1>{{ page.title }}</h1>
+    <a href="{{post.url}}#disqus_thread"></a>
     <p class="date">{{ page.date | date_to_string }}</p>
 </div>
 
 <div class="post">
-{{ content }}
+    {{ content }}
 </div>
+
+{% include social.html %}
 
 <div id="related_posts">
     <span>Maybe you'll like to read:</span>
     <ul>
     {% for post in site.related_posts %}
-    <li>
-    <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{post.title }}</a>
-    </li>
+        <li>
+        <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{post.title }}</a>
+        </li>
     {% endfor %}
     </ul>
 </div>
+
+{% include disqus.html %}

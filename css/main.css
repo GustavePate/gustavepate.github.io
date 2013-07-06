@@ -247,7 +247,7 @@ a:hover   {
   color: #0069ba;
   text-shadow: #0090ff 0px 0px 2px;
 }
-a:visited { color: #00a; }
+a:visited { color: #208; }
 
 img {
   position: relative;
@@ -305,7 +305,19 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 2em 1em 1.5em 1em;
+  padding: 2em 0em 1.5em 1em;
+}
+
+/* gravatar */
+#header_wrap img{
+    margin: 3em 4em 0px 0px;
+    float: right;
+    padding: 0em;
+    box-shadow: 0 0 10px #cccccc;
+/*    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    */
+    border-width: 0px;
 }
 
 #project_title {
@@ -326,6 +338,7 @@ Full-Width Styles
 }
 
 /********* gomenu *********/
+
 #menu_wrap {
     width: 100%;
   background: #eee;
@@ -354,6 +367,7 @@ Full-Width Styles
     float: right;
 }
 
+
 /********** gofront ********/
 
 #frontmatter{
@@ -372,6 +386,73 @@ Full-Width Styles
   background: url('../ressources/images/bg_hr.png') repeat-x bottom;
   font-variant: small-caps;
 }
+/********** gofrontsocial ********/
+
+#frontsocial{
+    background: #eee;
+    border: 1px dotted; 
+    border-color: #dddddd;
+    margin: 0;
+    margin-bottom: 5em;
+    padding: 1em 0em 1em 0em;
+    font-size: 1px;
+    width: 100%;
+    /*border: 1px solid red;*/
+    margin-bottom: 16px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+#frontsocial span {
+    display: inline-block;
+    margin: 0em 0em 0em 0em;
+    padding: 0px 0px 0px 0px;
+    vertical-align: middle;
+}
+
+#fs_twitter{
+    /*border: 1px dotted green;*/
+    margin: 0em 0em 0em 0em;
+    padding: 0px 0px 0px 0px;
+}
+
+#fs_gplus{
+    /*border: 1px solid blue;*/
+    margin: 0em 0em 0em 0em;
+    padding: 0px 0px 0px 0px;
+}
+
+#fs_facebook  {
+    vertical-align: middle;
+    /*border: 1px solid blue;*/
+}
+
+/* partially override by facebook */
+#fs_facebook .fb-like {
+}   
+
+
+/* override by google */
+#fs_gplus div{
+}
+
+/* override by twitter */
+#fs_twitter a{
+}
+
+#fs_spacer {
+    display: inline-block;
+}
+
+
+#fs_flattr {
+    width:140px;
+    text-align:right;
+}
+
+
+
 /***** gopostlist ******/
 
 #postlist {
@@ -452,16 +533,29 @@ Full-Width Styles
   padding: 1em 0em 1em 1em;
 }
 
-#footer .contact a {
-  text-shadow: none;
-  font-weight: 350;
+
+.contact {
+    float: right;
+    padding-right: 1em;
 }
 
-
-#footer .contact p {
-  color: #ffffff;
-  font-weight: 350;
+#footer .contact a  {
+    display: inline-block;
+    padding: 0em 0em 0em 0em;
+    text-shadow: none;
+    vertical-align: middle;
+    font-weight: 350;
 }
+
+#footer .contact .text  {
+    padding: 0 0 0.3em 0.3em;
+
+}
+
+.me {
+    color: #ffffff;
+}
+
 
 /*****************************************************************************/
 /*
@@ -490,7 +584,7 @@ ul.posts span {
 
 #post_header {
 
-    padding: 1em;
+    padding: 0.2em 1em 1em 1em;
     background-color: #eee;
     box-shadow: #aaa 0.3em -0.3em 0.9em;
     border-style: solid;
@@ -503,6 +597,7 @@ ul.posts span {
 #post_header > h1{
     font-size: 2em;
     margin-left: 0em;
+    margin-top: 0em;
     padding-left: 0em;
     padding-top: 0em;
     margin-bottom: 0px;
@@ -517,13 +612,42 @@ ul.posts span {
     margin-left: 0em;
 }
 
+/* comment number */
+#post_header > a{
+  text-decoration: none;
+  color: #007edf;
+  text-shadow: none;
+    float: right;
+    font-size: 0.85em;
+  transition: color 0.5s ease;
+  transition: text-shadow 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+  -webkit-transition: text-shadow 0.5s ease;
+  -moz-transition: color 0.5s ease;
+  -moz-transition: text-shadow 0.5s ease;
+  -o-transition: color 0.5s ease;
+  -o-transition: text-shadow 0.5s ease;
+  -ms-transition: color 0.5s ease;
+  -ms-transition: text-shadow 0.5s ease;
+}
+
+#post_header > a:hover   {
+  color: #0069ba;
+  text-shadow: #0090ff 0px 0px 2px;
+}
+
+#post_header > a:visited { 
+    color: #00a;
+}
+
+/* categories list */
 #post_header > ul{
     text-align: right;
     /*float: right;*/
     margin: 0px;
     padding: 0em;
 }
-
+/* categorie */
 #post_header li{
     font-size: 0.8em;
     font-family: monospace;
@@ -532,9 +656,10 @@ ul.posts span {
     padding: 0em;
     list-style: none;
     display: inline;
-    color: #444;
+    color: #555;
 }
 
+/* categorie */
 #post_header li.postcat:after{ 
     content: ","; 
 }
