@@ -719,6 +719,10 @@ Small Device Styles
     display: none;  
 }
 
+#fs_flattr{
+    display: none;  
+}
+
   h1 {
     font-size: 20px;
   }
