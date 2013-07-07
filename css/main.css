@@ -277,6 +277,8 @@ Full-Width Styles
     border-bottom-right-radius: 2px;
     */
     border-width: 0px;
+    opacity:0.8;
+    filter:alpha(opacity=80); /* For IE8 and earlier */
 }
 
 #project_title {
@@ -483,7 +485,7 @@ Full-Width Styles
   margin: 0px;
   background-color: #212121;
   background: -moz-linear-gradient(top,  #474747, #21212);
-  background: -webkit-linear-gradient(top),  #474747, #21212);
+  background: -webkit-linear-gradient(top,  #474747, #21212);
   background: -ms-linear-gradient(top,  #474747, #21212);
   background: -o-linear-gradient(top,  #474747, #21212);
   background: linear-gradient(to bottom,  #474747, #212121);
@@ -500,7 +502,6 @@ Full-Width Styles
 }
 
 #footer .contact a  {
-    font-color: 
     display: inline-block;
     padding: 0em 0em 0em 0em;
     text-shadow: none;
@@ -508,8 +509,14 @@ Full-Width Styles
     font-weight: 300;
 }
 
+.contact .webicon {
+    opacity:0.6;
+    filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+
+
 #footer .contact a:visited { 
-    color: #50b; 
+    color: #60c; 
 }
 
 #footer .contact .text  {
