@@ -1,0 +1,17 @@
+
+<div id="menu_wrap" class="outer">
+    <div class="inner">
+        <div id="menu">
+            <ul id="social">
+                <li><a class="webicon rss small" href="/atom.xml">atom/rss feed</a></li>
+            </ul>
+            <ul id="menu_entries">
+                <li><a href="/">home</a></li>
+                {% for cat in site.categories %}
+                <li><a href="/{{cat[0]}}.html">{{ cat[0] }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <!-- menu inner -->
+</div><!-- menu_wrap -->

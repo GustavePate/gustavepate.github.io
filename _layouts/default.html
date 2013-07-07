@@ -1,94 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <meta name="description" content="This is gustave pate github.io" />
-        <link rel="canonical" href="{{site.url}}{{page.url}}"/>
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width"/>
-        <!-- Custom CSS -->
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css"/>
-        <link rel="stylesheet" type="text/css" media="screen" href="/css/pygment_trac.css"/>
-
-        <!-- favicon -->
-        <link href="/ressources/favicon.ico" rel="icon" type="image/x-icon" />
-        <!-- adam's webicons .css -->
-        <link rel="stylesheet" href="/css/webicons.css">
-
-        <!-- twitter -->
-        <script>
-            !function(d,s,id){
-            var js,fjs=d.getElementsByTagName(s)[0];
-            if(!d.getElementById(id)){
-                js=d.createElement(s);
-                js.id=id;
-                js.src="https://platform.twitter.com/widgets.js";
-                fjs.parentNode.insertBefore(js,fjs);
-                }
-            }(document,"script","twitter-wjs");
-        </script>
-        <!-- facebook -->
-        <script>
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
-        <!-- flattr -->
-        <script type="text/javascript"> 
-            /* <![CDATA[ */ 
-            (function() { 
-                var s = document.createElement('script'); 
-                var t = document.getElementsByTagName('script')[0]; 
-                s.type = 'text/javascript'; 
-                s.async = true; 
-                s.src = 'https://api.flattr.com/js/0.6/load.js?'+
-                    'mode=auto&'+
-                    'button=compact&'+
-                    'category=text&'+
-                    'popout=0&'+
-                    'uid={{site.flattr}}';
-                t.parentNode.insertBefore(s, t); 
-            })(); 
-            /* ]]> */ 
-        </script>
+        {% include head.html %}
     </head>
 
     <body>
         <div class="no-svg" id="page_warp">
 
-        <!-- HEADER -->
-        <div id="header_wrap" class="outer">
-            <header class="inner">
-            <a id="forkme_banner" href="https://github.com/GustavePate/gustavepate.github.io">View on GitHub</a>
-            <img 
-                src="https://secure.gravatar.com/avatar/7c1a2f289fe6f9cce1705e3ee9242ed0.png?s=70" 
-                alt="my gravatar"/>
-            <h1 id="project_title">{{ site.name }}</h1>
-            <h2 id="project_tagline">{{ site.tagline }}</h2>
-            </header>
-        </div>
+            {% include header.html %}
 
-        <div id="menu_wrap" class="outer">
-            <div class="inner">
-                <div id="menu">
-                    <ul id="social">
-                        <li><a class="webicon rss small" href="/atom.xml">atom/rss feed</a></li>
-                    </ul>
-                    <ul id="menu_entries">
-                        <li><a href="/">home</a></li>
-                        {% for cat in site.categories %}
-                        <li><a href="/{{cat[0]}}.html">{{ cat[0] }}</a></li>
-                        {% endfor %}
-                    </ul>
-                </div>
-            </div>
-            <!-- menu inner -->
-        </div><!-- menu_wrap -->
+            {% include menu.html %}
 
         <!--
         <script type="text/javascript" 
@@ -111,32 +32,8 @@
    </section>--><!-- right_col_wrap -->
         </div><!-- main_content -->
 
+        {% include footer.html %}
 
-        <!-- FOOTER -->
-        <div id="footer_wrap" class="outer">
-            <div id="footer" class="inner">
-                <div class="contact">
-                    <p> 
-                    <a class="webicon github small" href="">github_logo</a>
-                    <a class="text" href="http://github.com/{{site.github}}/">github.com/{{site.github}}</a>
-                    </p>
-                    <p>
-                    <a class="webicon twitter small" href="">twitter_logo</a>
-                    <a class="text" href="http://twitter.com/{{site.twitter}}/">@{{site.twitter}}</a>
-                    </p>
-                    <p>
-                    <a class="webicon mail small" href="">mail_logo</a>
-                    <a class="text" href="mailto:{{site.email | uri_escape}}">{{site.email}}</a>
-                    </p>
-                </div>
-                <div class="me">
-                    <p>
-                    {{site.author}}<br />
-                    {{site.motto}}<br />
-                    </p>
-                </div>
-            </div> <!-- footer -->
-        </div><!-- footer_wrap -->
     </div> <!-- page warp -->
     </body>
 </html>
