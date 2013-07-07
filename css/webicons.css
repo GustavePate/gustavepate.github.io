@@ -82,3 +82,15 @@
 
 .svg .webicon.twitter {
   background: url("/ressources/webicons/webicon-twitter.svg"); }
+
+.no-svg .webicon.html5 {
+  background: url("/ressources/webicons/webicon-html5-m.png"); }
+
+.no-svg .webicon.html5.large {
+  background: url("/ressources/webicons/webicon-html5.png"); }
+
+.no-svg .webicon.html5.small {
+  background: url("/ressources/webicons/webicon-html5-s.png"); }
+
+.svg .webicon.html5 {
+  background: url("/ressources/webicons/webicon-html5.svg"); }

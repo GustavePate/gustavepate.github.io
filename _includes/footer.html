@@ -1,7 +1,19 @@
 <!-- FOOTER -->
 <div id="footer_wrap" class="outer">
     <div id="footer" class="inner">
-        <div class="contact">
+
+        <div id="foot_me" class="footer_section">
+            <p>
+            {{site.author}}<br />
+            {{site.motto}}<br />
+            </p>
+        </div>
+
+        <div id="foot_middle" class="footer_section">
+            <a class="webicon html5 large" href="">html5_logo</a>
+        </div>
+
+        <div id="foot_contact" class="footer_section">
             <p> 
             <a class="webicon github small" href="">github_logo</a>
             <a class="text" href="http://github.com/{{site.github}}/">github.com/{{site.github}}</a>
@@ -14,12 +26,6 @@
             <a class="webicon mail small" href="">mail_logo</a>
             <a class="text" href="mailto:{{site.email | uri_escape}}">{{site.email}}</a>
             </p>
-        </div>
-        <div class="me">
-            <p>
-            {{site.author}}<br />
-            {{site.motto}}<br />
-            </p>
-        </div>
-    </div> <!-- footer -->
+        </div> <!-- foot_contact -->
+    </div> <!-- footer inner-->
 </div><!-- footer_wrap -->

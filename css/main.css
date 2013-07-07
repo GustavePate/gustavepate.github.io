@@ -363,7 +363,6 @@ Full-Width Styles
     vertical-align: middle;
 }
 
-
 #frontsocial div {
     display: inline-block;
     margin: 0em 0em 0em 0em;
@@ -392,7 +391,6 @@ Full-Width Styles
 #fs_facebook .fb-like {
 }   
 
-
 /* override by google */
 #fs_gplus div{
 }
@@ -406,8 +404,6 @@ Full-Width Styles
     width:140px;
     text-align:right;
 }
-
-
 
 /***** gopostlist ******/
 
@@ -435,12 +431,11 @@ Full-Width Styles
   margin-left: 3em;
 }
 
-
 /********* gomain *********/
 #main_content_wrap {
   background: #f2f2f2;
   /* space for my footer */
-  padding-bottom: 9em;
+  padding-bottom: 10em;
 }
 
 #main_content {
@@ -463,10 +458,6 @@ Full-Width Styles
   font-variant: small-caps;
 }
 
-
-
-
-
 /********* gocol *********/
 #right_col_wrap{
     display: none;
@@ -482,6 +473,7 @@ Full-Width Styles
   border-top: 1px solid #111;
   width: 100%;
   margin: 0px;
+  padding: 0px;
   background-color: #212121;
   background: -moz-linear-gradient(top,  #474747, #21212);
   background: -webkit-linear-gradient(top,  #474747, #21212);
@@ -491,40 +483,63 @@ Full-Width Styles
 }
 
 #footer_wrap .inner {
-  padding: 1em 0em 1em 1em;
+    padding: 1em 1em 0em 1em;
+    margin: 0em;
+    text-align: justify;
 }
 
-
-.contact {
-    float: right;
-    padding-right: 1em;
-}
-
-#footer .contact a  {
+.footer_section {
     display: inline-block;
+    vertical-align: middle;
+}
+
+#footer_wrap .inner:after{
+     content: '';
+     display: inline-block;
+     margin: 0px;
+     padding: 0px;
+     width: 100%;
+     height: 0px;
+     font-size:0px;
+     line-height:0px;
+ }
+
+#foot_me {
+    color: #ffffff;
+}
+
+#foot_middle a {
+    opacity:0.2;
+}
+
+#foot_contact {
+}
+
+#foot_contact p {
+}
+
+#foot_contact a  {
+    display: inline-block;
+    margin: 0px;
     padding: 0em 0em 0em 0em;
     text-shadow: none;
     vertical-align: middle;
     font-weight: 300;
 }
 
-.contact .webicon {
+#foot_contact .webicon {
     opacity:0.6;
 }
 
-
-#footer .contact a:visited { 
+#foot_contact a:visited { 
     color: #60c; 
 }
 
-#footer .contact .text  {
+#foot_contact .text  {
+    margin: 0px;
     padding: 0 0 0.3em 0.3em;
-
 }
 
-.me {
-    color: #ffffff;
-}
 
 
 /*****************************************************************************/
