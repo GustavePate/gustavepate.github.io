@@ -7,13 +7,11 @@
         <link rel="canonical" href="{{site.url}}{{page.url}}"/>
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width"/>
-        <!-- css optimization -->
-        <script type="text/javascript" src="/ressources/javascript/helium.js"></script>
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css"/>
-
         <!-- Custom CSS -->
         <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css"/>
+        <link rel="stylesheet" type="text/css" media="screen" href="/css/pygment_trac.css"/>
+
+        <!-- favicon -->
         <link href="/ressources/favicon.ico" rel="icon" type="image/x-icon" />
         <!-- adam's webicons .css -->
         <link rel="stylesheet" href="/css/webicons.css">
@@ -92,6 +90,16 @@
             <!-- menu inner -->
         </div><!-- menu_wrap -->
 
+        <!--
+        <script type="text/javascript" 
+            src="/ressources/helium-css/helium.js">
+        </script>
+        <script type="text/javascript"> 
+            window.addEventListener('load', function(){ helium.init(); },false);
+        </script>
+        -->
+
+
         <!-- MAIN CONTENT -->
         <div id="main_content_wrap" class="outer">
             <section id="main_content" class="inner">
@@ -130,8 +138,5 @@
             </div> <!-- footer -->
         </div><!-- footer_wrap -->
     </div> <!-- page warp -->
-    <script type="text/javascript"> 
-        window.addEventListener('load', function(){ helium.init();}, false); 
-    </script>
     </body>
 </html>

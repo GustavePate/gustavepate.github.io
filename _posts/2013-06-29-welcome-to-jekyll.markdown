@@ -33,6 +33,10 @@ Check out the [Jekyll docs][jekyll] for more info on how to get the most out of 
 
 ## reminders of markdown syntax
 
+blockquote
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing
+> id sem consectetuer libero luctus adipiscing.
+
 * page.id : {{page.id}}
 * page.url : {{page.url}}
 * site url: {{ site.url }}
