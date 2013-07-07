@@ -700,31 +700,47 @@ Small Device Styles
   }
 
   #project_title {
-  font-size: 32px;
+  font-size: 24px;
   }
 
+  #project_tagline {
+    display: none;
+  }
+
+  #header_wrap img{
+    display: none;  
+  }  
+
+#foot_me{
+    display: none;  
+}
+
+#foot_middle{
+    display: none;  
+}
+
   h1 {
-    font-size: 28px;
+    font-size: 20px;
   }
 
   h2 {
-    font-size: 24px;
-  }
-
-  h3 {
-    font-size: 21px;
-  }
-
-  h4 {
     font-size: 18px;
   }
 
+  h3 {
+    font-size: 17px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
   h5 {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   h6 {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   code, pre {
