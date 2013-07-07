@@ -707,6 +707,10 @@ Small Device Styles
     display: none;
   }
 
+  #forkme_banner {
+    display: none;
+  }
+
   #header_wrap img{
     display: none;  
   }  
