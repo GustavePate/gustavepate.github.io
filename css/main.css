@@ -363,7 +363,7 @@ Full-Width Styles
 }
 
 
-#frontsocial span {
+#frontsocial div {
     display: inline-block;
     margin: 0em 0em 0em 0em;
     padding: 0px 0px 0px 0px;
@@ -478,10 +478,15 @@ Full-Width Styles
   height: 8em;
   bottom: 0;
   left: 0;
-  background: #212121;
   border-top: 1px solid #111;
   width: 100%;
   margin: 0px;
+  background-color: #212121;
+  background: -moz-linear-gradient(top,  #474747, #21212);
+  background: -webkit-linear-gradient(top),  #474747, #21212);
+  background: -ms-linear-gradient(top,  #474747, #21212);
+  background: -o-linear-gradient(top,  #474747, #21212);
+  background: linear-gradient(to bottom,  #474747, #212121);
 }
 
 #footer_wrap .inner {
@@ -495,11 +500,16 @@ Full-Width Styles
 }
 
 #footer .contact a  {
+    font-color: 
     display: inline-block;
     padding: 0em 0em 0em 0em;
     text-shadow: none;
     vertical-align: middle;
     font-weight: 300;
+}
+
+#footer .contact a:visited { 
+    color: #50b; 
 }
 
 #footer .contact .text  {
