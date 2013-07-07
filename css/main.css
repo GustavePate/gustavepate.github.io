@@ -278,7 +278,6 @@ Full-Width Styles
     */
     border-width: 0px;
     opacity:0.8;
-    filter:alpha(opacity=80); /* For IE8 and earlier */
 }
 
 #project_title {
@@ -511,7 +510,6 @@ Full-Width Styles
 
 .contact .webicon {
     opacity:0.6;
-    filter:alpha(opacity=60); /* For IE8 and earlier */
 }
 
 
