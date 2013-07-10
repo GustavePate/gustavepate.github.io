@@ -60,14 +60,11 @@ an ordered list:
 
 a big list with paragraphs:
 
-* ookokokokokokokokokokokokokokokokokokokokkokokok
-
+* ooko ko kok ok okokok okoko kok okoko kokoko kokok kokokok
   iikoikoiko  ikoikoiko  ikoikoiko  ikoikoiko  koikoiko 
 
 * three lines
-
   three lines
-
   three lines
 
 This is a rule (hr):

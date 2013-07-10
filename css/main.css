@@ -46,7 +46,9 @@ html, body { height: 100%; }
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
-p { margin: 0em 0; }
+p { 
+    margin: 0px;
+}
 
 
 ol, ul {
@@ -109,27 +111,30 @@ strong {
 }
 
 
-pre, code {
-  width: 100%;
+
+pre {
   color: #222;
   background-color: #fff;
-
   font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
   font-size: 14px;
-
   border-radius: 2px;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
-}
 
-pre {
-  width: 100%;
   padding: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
   overflow: auto;
 }
 
 code {
+  color: #222;
+  background-color: #fff;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
+  font-size: 14px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+
   padding: 3px;
   margin: 0 3px;
   box-shadow: 0 0 10px rgba(0,0,0,.1);
@@ -209,12 +214,13 @@ a:hover   {
 a:visited { color: #208; }
 
 img {
-  position: relative;
-  max-width: 600px;
-  margin-top: 0.8em;
-  margin-bottom: 0.8em;
-  border: 1px solid #ebebeb;
-  box-shadow: 0 0 10px rgba(0,0,0,.1);
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    margin-top: 0.8em;
+    margin-bottom: 0.8em;
+    border: 1px solid #ebebeb;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
 }
 
 /*******************************************************************************
@@ -281,6 +287,7 @@ Full-Width Styles
 }
 
 #project_title {
+    width=10px;
   margin: 0;
   color: #fff;
   font-size: 42px;
@@ -480,11 +487,12 @@ Full-Width Styles
   background: -ms-linear-gradient(top,  #474747, #21212);
   background: -o-linear-gradient(top,  #474747, #21212);
   background: linear-gradient(to bottom,  #474747, #212121);
+  text-align: center;
 }
 
 #footer_wrap .inner {
     padding: 1em 1em 0em 1em;
-    margin: 0em;
+    margin: 0 auto;
     text-align: justify;
 }
 
@@ -686,7 +694,7 @@ div.post {
 
 
 /*******************************************************************************
-Small Device Styles
+Small Tablet 
 *******************************************************************************/
 
 @media screen and (max-width: 480px) {
@@ -715,9 +723,6 @@ Small Device Styles
     display: none;  
   }  
 
-#foot_me{
-    display: none;  
-}
 
 #foot_middle{
     display: none;  
@@ -757,8 +762,149 @@ Small Device Styles
     font-size: 11px;
   }
 
+
+/* goiphone */
+/* iphone */
+@media screen and (max-width: 320px) {
+
+
+    body {
+        font-size:12px;
+    }
+
+    code, pre {
+        min-width: 200px;
+        max-width: 300px;
+        font-size: 10px;
+    }
+
+    code {
+        width: 90%;
+    }
+
+    .inner {
+        position: relative;
+        max-width: 320px;
+        min-width: 240px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #header_wrap {
+        background-color: #212121;
+        background: -moz-linear-gradient(bottom,  #474747, #212121);
+        background: -webkit-linear-gradient(bottom,  #474747, #212121);
+        background: -ms-linear-gradient(bottom,  #474747, #212121);
+        background: -o-linear-gradient(bottom,  #474747, #212121);
+        background: linear-gradient(to top,  #474747, #212121);
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #header_wrap .inner {
+        padding: 1em 0em 1em 1em;
+        margin: 0px;
+    }
+
+    #project_title {
+        font-size: 20px;
+        width: 13em;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #menu_wrap {
+    }
+
+    #menu_wrap .inner {
+        margin: 0px;
+        padding: 0em;
+    }
+
+    #menu {
+    }
+
+    #menu #social{
+        padding: Opx;
+        display: none;
+    }
+
+    #menu #menu_entries{
+    }
+
+    #main_content_wrap {
+    }
+    
+    #frontsocial{
+        display: none;
+    }
+
+    #footer_wrap{
+    }
+
+    #footer_wrap .inner{
+    }
+
+    #footer_wrap #footer{ 
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #footer_wrap #footer #foot_me{
+        display: none;
+    }
+
+    #footer_wrap #footer #foot_middle{
+        display: none;
+    }
+
+    #footer_wrap #footer #foot_contact{
+        padding: 1.5em 0em 0em 1.5em;
+    }
+
+
 }
+    
+/* goandroid */
+/* small android */
+@media screen and (max-width: 240px) {
 
+    .inner {
+        position: relative;
+        max-width: 240px;
+        min-width: 200px;
+        padding: 0px;
+        margin: 0px;
+    }
 
+    code, pre {
+        min-width: 200px;
+        max-width: 220px;
+        font-size: 9px;
+    }
 
+    #header_wrap {
 
+    }
+
+    #project_title {
+        font-size: 15px;
+        width: 13em;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #menu_wrap {
+    }
+
+    #main_content_wrap {
+    }
+
+    #footer_wrap{
+    }
+
+    #disqus_thread{
+        display: none;
+    }
+
+}
