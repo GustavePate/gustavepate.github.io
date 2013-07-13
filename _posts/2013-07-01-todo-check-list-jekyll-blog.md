@@ -11,26 +11,25 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 ---
 
 ## Blog
-* test structured data
-* [test twitter card](https://dev.twitter.com/docs/cards/validation/validator)
-* [google author rich snippet](http://davidensinger.com/2013/05/setting-up-google-author-rich-snippets/)
-* [facebook open graph](http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/)
-* [twitter cards](https://github.com/jpoehls/hulk-example/blob/master/_posts/2013/2013-02-02-jekyll-recipes-for-blog-meta-tags.md)
+* [validate rich snippets](https://www.google.com/webmasters/tools/richsnippets)
+* [validate opengraph](https://developers.facebook.com/tools/debug)
 * [google webmaster tools](http://www.google.com/webmasters/tools/)
 * rss feed / category
 * right bar style
 * images in post header and meta data
+* prettify the 404 error page
+* recheck validity xhtml and css
 
 ### [google search engine optimization guide](http://www.google.com/webmasters/docs/search-engine-optimization-starter-guide.pdf)
-* [schema keywords](http://schema.org/)
-* [add rel author links](http://www.vervesearch.com/blog/seo/how-to-implement-the-relauthor-tag-a-step-by-step-guide/)
-* clear description on the front page
-* check page title relevance
-* accurate meta description tag
-* accurate page url
-* 404 page with link to the main page + latest 10 articles
-* alt for images
-* a tags/anchor should be relevant
+* ok [schema keywords](http://schema.org/)
+* ok [add rel author links](http://www.vervesearch.com/blog/seo/how-to-implement-the-relauthor-tag-a-step-by-step-guide/)
+* todo: clear description on the front page
+* ok: check page title relevance
+* ok: accurate meta description tag
+* ok: accurate page url
+* ok:  [404 page with link to the main page + latest 10 articles](http://yizeng.me/2013/05/26/create-a-custom-jekyll-404-page/)
+* ok: alt for images
+* ok: a tags/anchor should be relevant
 
 ### when everything is ok
 * [submit content to google](http://www.google.com/submityourcontent/)
@@ -39,6 +38,10 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 
 ## Done
 * seo
+* [twitter cards](https://github.com/jpoehls/hulk-example/blob/master/_posts/2013/2013-02-02-jekyll-recipes-for-blog-meta-tags.md)
+* [google author rich snippet](http://davidensinger.com/2013/05/setting-up-google-author-rich-snippets/)
+* [facebook open graph](http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/)
+* [test twitter card](https://dev.twitter.com/docs/cards/validation/validator)
 * [add structred data](http://schema.org/)
 * [meta description](http://paradigmatic.streum.org/2011/02/generating-html-meta-data-with-jekyll/)
 * feedburner (don't know if this is usefull)
