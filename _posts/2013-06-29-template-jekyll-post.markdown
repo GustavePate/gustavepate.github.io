@@ -5,6 +5,8 @@ published: true
 tags: template meaningless
 description: This should be move to draf and is only an exemple post
 categories: [python, linux]
+image:  false
+article: yes
 ---
 
 

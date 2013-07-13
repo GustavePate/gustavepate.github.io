@@ -1,6 +1,8 @@
 
 <meta charset="utf-8"/>
 
+<!-- VARIOUS META DATA -->
+
 <!-- meta description -->
 {% if page.description %}
 <meta name="description" content="{{page.description}}" />
@@ -19,6 +21,9 @@
 <link rel="author" href="http://plus.google.com/115414251925827981582"/>
 <title>{{site.title}} - {{ page.title }}</title>
 <meta name="viewport" content="width=device-width"/>
+
+<!-- CSS -->
+
 <!-- Custom CSS -->
 <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css"/>
 <link rel="stylesheet" type="text/css" media="screen" href="/css/pygment_trac.css"/>
@@ -27,6 +32,86 @@
 <link href="/ressources/favicon.ico" rel="icon" type="image/x-icon" />
 <!-- adam's webicons .css -->
 <link rel="stylesheet" href="/css/webicons.css">
+
+<!-- twitter card -->
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:site" content="@GustavePate"/>
+<meta name="twitter:creator" content="@GustavePate"/>
+{% if page.title %}
+    <meta name="twitter:title" content="{{page.title }}"/>
+{% else %}
+    <meta name="twitter:title" content="{{site.title }}"/>
+{% endif %}
+
+<meta name="twitter:url" content="{{site.url }}{{page.url }}"/>
+
+{% if page.article %}
+    {% if page.description %}
+        <meta name="twitter:description" content="{{page.description }}"/>
+    {% else %}
+        <meta name="twitter:description" content="{{page.content | strip_html | xml_escape | truncate: 200 }}"/> 
+    {% endif %}
+{% else %}
+    <meta name="twitter:description" content="{{site.description }}"/>
+{% endif %}
+
+{% if page.image %}
+    <meta name="twitter:image:src" content="{{site.url }}/ressources/images/{{ page.image }}"/>
+{% else %}
+    <meta name="twitter:image:src" content="{{site.url }}/ressources/images/{{ site.image}}"/>
+{% endif %}
+
+<!-- Open Graph -->
+
+<meta content="{{site.name }}" property="og:site_name"/> 
+
+{% if page.article %} 
+    <meta content="article" property="og:type"/> 
+    <meta content="{{page.title}}" property="og:title"/> 
+
+    {% if page.description %} 
+        <meta content="{{page.description }}" property="og:description"/> 
+    {% else %}
+        <meta content="{{page.content | strip_html | xml_escape | truncate: 200 }}" property="og:description"/> 
+    {% endif %} 
+
+    {% if page.date %} 
+        <meta content="{{page.date | date_to_xmlschema }}" property="article:published_time"/> 
+        <meta content="{{site.url }}/about.html" property="article:author"/> 
+    {% endif %} 
+
+    {% if page.categories %} 
+        {% for category in page.categories limit:1 %} 
+            <meta content="{{category }}" property="article:section"/> 
+        {% endfor %} 
+    {% endif %} 
+
+    {% if page.keywords %} 
+        {% for keyword in page.keywords %} 
+            <meta content="{{keyword }}" property="article:tag"/> 
+        {% endfor %} 
+    {% endif %}
+
+{% else %}
+    <meta content="website" property="og:type"/> 
+    <meta content="{{site.title }}" property="og:title"/> 
+    <meta content="{{site.description }}" property="og:description"/> 
+{% endif %} 
+
+<meta content="{{site.url }}{{page.url }}" property="og:url"/>  
+
+{% if page.image %} 
+    <meta content="{{site.url }}/ressources/images/{{page.image }}" property="og:image"/>
+{% else %} 
+    <meta content="{{site.url }}/ressources/images/{{site.image}}" property="og:image"/> 
+{% endif %} 
+
+<meta property="profile:first_name" content="{{site.firstname}}"/>
+<meta property="profile:last_name" content="{{site.lastname}}"/>
+<meta property="profile:gender" content="{{site.gender}}"/>
+
+<!-- VARIOUS JAVASCRIPTS -->
 
 <!-- twitter -->
 <script>

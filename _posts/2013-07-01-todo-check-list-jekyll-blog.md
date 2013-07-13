@@ -5,16 +5,21 @@ date:   2013-06-29 19:55:05
 description: "This post is about things that need to be done in order to have a decent
 responsive blog well integrated with google, facebook and twitter."
 categories: [web]
+image: false
+article: yes
+keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check list, todo list]
 ---
 
 ## Blog
 * test structured data
+* [test twitter card](https://dev.twitter.com/docs/cards/validation/validator)
 * [google author rich snippet](http://davidensinger.com/2013/05/setting-up-google-author-rich-snippets/)
 * [facebook open graph](http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/)
 * [twitter cards](https://github.com/jpoehls/hulk-example/blob/master/_posts/2013/2013-02-02-jekyll-recipes-for-blog-meta-tags.md)
 * [google webmaster tools](http://www.google.com/webmasters/tools/)
 * rss feed / category
 * right bar style
+* images in post header and meta data
 
 ### [google search engine optimization guide](http://www.google.com/webmasters/docs/search-engine-optimization-starter-guide.pdf)
 * [schema keywords](http://schema.org/)
