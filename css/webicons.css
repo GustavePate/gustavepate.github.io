@@ -93,4 +93,17 @@
   background: url("/ressources/webicons/webicon-html5-s.png"); }
 
 .svg .webicon.html5 {
-  background: url("/ressources/webicons/webicon-html5.svg"); }
+ background: url("/ressources/webicons/webicon-html5.svg"); }
+
+.no-svg .webicon.googleplus {
+  background: url("/ressources/webicons/webicon-googleplus-m.png"); }
+
+.no-svg .webicon.googleplus.large {
+  background: url("/ressources/webicons/webicon-googleplus.png"); }
+
+.no-svg .webicon.googleplus.small {
+  background: url("/ressources/webicons/webicon-googleplus-s.png"); }
+
+.svg .webicon.googleplus {
+  background: url("/ressources/webicons/webicon-googleplus.svg"); }
+

@@ -1,4 +1,5 @@
 name: Gustave Paté's Hideout
+title: Gustave Pate
 tagline: Python, Linux, Stuff from outer space
 pygments: true
 timezone: Europe/Paris
@@ -11,3 +12,5 @@ flattr: GustavePate
 github: gustavepate
 url: http://gustavepate.github.io
 permalink: /blog/:year:month:day/:title/
+description: This a site about linux, python, web, quality and high availability
+keywords: python linux android blog gustave pate paté testing best practices high availability

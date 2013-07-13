@@ -2,6 +2,7 @@
 layout: post
 title:  "High availability best practices"
 date:   2013-07-10 19:55:05
+description: Things to do in order to lower maintenance on a high availibility application
 categories: [web]
 ---
 

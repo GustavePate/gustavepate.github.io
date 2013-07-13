@@ -1,0 +1,58 @@
+---
+layout: default
+title: Gustave Paté Hideout
+---
+
+
+<div id='aboutblog' itemscope itemtype="http://schema.org/Blog">
+
+    <h1>About <a itemprop="url" href="{{site.url}}">this blog</a></h1>
+    <span itemprop="name">GustavePaté's Hideout</span> will be about:
+    <ul itemprop="description">
+        <li>Linux</li>
+        <li>Python</li>
+        <li>Android</li>
+        <li>Web</li>
+        <li>Testing</li>
+        <li>High availability</li>
+    </ul>
+    I will post there things I have to remind, I find cool or hard work I want to share.<br/>
+    Gustave Paté's Hideout is powered by <span itemprop="isBasedOnUrl"><a
+            href="http://pages.github.com/">Github Pages</a></span> and is generated with <a
+        href="http://jekyllrb.com/">Jekyll</a>
+    <br/>
+    <div id='aboutme' itemprop="author" itemscope itemtype="http://schema.org/Person">
+
+        <h1>About Gustave Paté</h1>
+        Hi!<br/>
+        I am <span itemprop="name">Gustave Paté</span>.<br/>
+        Also known as <span itemprop="additionalName">Gustave Pate</span></br>
+        (if your keyboard is not friend with acute accent.)<br/>
+        <br/>
+
+        <span itemprop="description">I'm not a reel human, my existence is confined in the
+            Internets.<br/> I love playing with linux and python</span><br/>
+        I am the avatar of a <span itemprop="nationality">french</span> <span itemprop="jobTitle"> project manager</span>.<br/>
+        I run <a href="{{site.url}} itemprop="url">Gustave Paté's Hideout</a><br/>
+        Here is my picture:<br/>
+        <img alt="Gustave Pate" itemprop="image" src="https://secure.gravatar.com/avatar/7c1a2f289fe6f9cce1705e3ee9242ed0.png?s=70" 
+        You can contact me by following the links in this page footer.
+    </div><!-- Person -->
+
+    <h2>Here are the post  I published so far</h2>
+
+    <ul class="posts" itemprop="blogposts">
+        <div class="postlisting" itemscope itemtype="http://schema.org/BlogPosting">
+            {% for post in site.posts %}
+            <li>
+            <span>{{ post.date | date_to_string }}</span> &raquo; 
+            <a itemprop="url" href="{{ post.url }}"><span itemprop="name">{{post.title }}</span></a>
+            <div class="excerpt" itemprop="description">{{ post.excerpt }}</div>
+            </li>
+            {% endfor %}
+        </div> <!-- BlogPosting -->
+    </ul>
+
+
+
+</div> <!-- Blog -->

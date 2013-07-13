@@ -11,6 +11,7 @@ title: Gustave Paté Hideout
 
 {% include social.html %}
 
+<!-- display all the posts list on the front page -->
 <div id="postlist">
     <h1>Blog Posts</h1>
     <ul class="posts">
@@ -18,7 +19,7 @@ title: Gustave Paté Hideout
         <li>
         <span>{{ post.date | date_to_string }}</span> &raquo; 
         <a href="{{ post.url }}">{{post.title }}</a>
-        <div class="excerpt">{{ post.excerpt }}</div>
+        <div class="excerpt">{{ post.description }}</div>
         </li>
         {% endfor %}
     </ul>

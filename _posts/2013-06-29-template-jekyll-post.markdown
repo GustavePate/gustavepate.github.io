@@ -3,10 +3,10 @@ layout: post
 title:  Template Post
 published: true
 tags: template meaningless
+description: This should be move to draf and is only an exemple post
 categories: [python, linux]
 ---
 
-This should be moved to draft.
 
 ## original post
 

@@ -465,6 +465,20 @@ Full-Width Styles
   font-variant: small-caps;
 }
 
+#main_content h3 {
+  padding-bottom: 0.3em;
+  font-size: 1.2em;
+  background: url('../ressources/images/bg_hr.png') repeat-x bottom;
+  font-variant: small-caps;
+}
+
+#main_content h4 {
+  padding-bottom: 0.3em;
+  font-size: 0.9em;
+  background: url('../ressources/images/bg_hr.png') repeat-x bottom;
+  font-variant: small-caps;
+}
+
 /********* gocol *********/
 #right_col_wrap{
     display: none;
@@ -474,7 +488,7 @@ Full-Width Styles
 
 #footer_wrap {
   position: absolute; 
-  height: 8em;
+  height: 9.5em;
   bottom: 0;
   left: 0;
   border-top: 1px solid #111;
