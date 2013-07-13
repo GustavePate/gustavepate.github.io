@@ -13,12 +13,15 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 ## Blog
 * [validate rich snippets](https://www.google.com/webmasters/tools/richsnippets)
 * [validate opengraph](https://developers.facebook.com/tools/debug)
-* [google webmaster tools](http://www.google.com/webmasters/tools/)
+* [validate twitter cards](https://dev.twitter.com/docs/cards/validation/validator)
+* [xhtml validation](http://validator.w3.org/check?uri=http%3A%2F%2Fgustavepate.github.io)
+* [css validation](http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgustavepate.github.io)
 * rss feed / category
 * right bar style
 * images in post header and meta data
 * prettify the 404 error page
 * recheck validity xhtml and css
+* [google webmaster tools](http://www.google.com/webmasters/tools/)
 
 ### [google search engine optimization guide](http://www.google.com/webmasters/docs/search-engine-optimization-starter-guide.pdf)
 * ok [schema keywords](http://schema.org/)
@@ -38,6 +41,7 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 
 ## Done
 * seo
+* [attach sitre to your facebook account](https://developers.facebook.com/docs/insights/)
 * [twitter cards](https://github.com/jpoehls/hulk-example/blob/master/_posts/2013/2013-02-02-jekyll-recipes-for-blog-meta-tags.md)
 * [google author rich snippet](http://davidensinger.com/2013/05/setting-up-google-author-rich-snippets/)
 * [facebook open graph](http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/)
@@ -54,8 +58,6 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 * [rss/atom validation](http://validator.w3.org/feed/check.cgi?url=http%3A%2F%2Fgustavepate.github.io%2Fatom.xml)
 * validation badges css html5
 * refaire le footer en (display: table)
-* [xhtml validation](http://validator.w3.org/check?uri=http%3A%2F%2Fgustavepate.github.io)
-* [css validation](http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgustavepate.github.io)
 * refaire la barre social sans div under span (display: table)
 * footer gradient
 * [optimize css](https://github.com/geuis/helium-css)
