@@ -11,9 +11,7 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 ---
 
 ## Blog
-* [validate rich snippets](https://www.google.com/webmasters/tools/richsnippets)
 * [validate opengraph](https://developers.facebook.com/tools/debug)
-* [validate twitter cards](https://dev.twitter.com/docs/cards/validation/validator)
 * [xhtml validation](http://validator.w3.org/check?uri=http%3A%2F%2Fgustavepate.github.io)
 * [css validation](http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgustavepate.github.io)
 * rss feed / category
@@ -22,6 +20,7 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 * prettify the 404 error page
 * recheck validity xhtml and css
 * [google webmaster tools](http://www.google.com/webmasters/tools/)
+* write articles
 
 ### [google search engine optimization guide](http://www.google.com/webmasters/docs/search-engine-optimization-starter-guide.pdf)
 * ok [schema keywords](http://schema.org/)
@@ -43,7 +42,9 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 * seo
 * [attach sitre to your facebook account](https://developers.facebook.com/docs/insights/)
 * [twitter cards](https://github.com/jpoehls/hulk-example/blob/master/_posts/2013/2013-02-02-jekyll-recipes-for-blog-meta-tags.md)
+* [validate twitter cards](https://dev.twitter.com/docs/cards/validation/validator)
 * [google author rich snippet](http://davidensinger.com/2013/05/setting-up-google-author-rich-snippets/)
+* [validate rich snippets](https://www.google.com/webmasters/tools/richsnippets)
 * [facebook open graph](http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/)
 * [test twitter card](https://dev.twitter.com/docs/cards/validation/validator)
 * [add structred data](http://schema.org/)
