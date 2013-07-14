@@ -12,7 +12,6 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 
 ## Blog
 * [validate opengraph](https://developers.facebook.com/tools/debug)
-* [xhtml validation](http://validator.w3.org/check?uri=http%3A%2F%2Fgustavepate.github.io)
 * [css validation](http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgustavepate.github.io)
 * rss feed / category
 * right bar style
@@ -39,6 +38,7 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 
 
 ## Done
+* [xhtml validation](http://validator.w3.org/check?uri=http%3A%2F%2Fgustavepate.github.io)
 * seo
 * [attach sitre to your facebook account](https://developers.facebook.com/docs/insights/)
 * [twitter cards](https://github.com/jpoehls/hulk-example/blob/master/_posts/2013/2013-02-02-jekyll-recipes-for-blog-meta-tags.md)
