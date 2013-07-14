@@ -776,8 +776,8 @@ Small Tablet
   }
 
 
-/* goiphone  iphone */
-/*
+/* goiphone */
+/* iphone */
 @media screen and (max-width: 320px) {
 
 
@@ -874,11 +874,10 @@ Small Tablet
     #footer_wrap #footer #foot_contact{
         padding: 1.5em 0em 0em 1.5em;
     }
-*/
-
-/* goandroid  small android */
-
-/*@media screen and (max-width: 240px) {
+    
+/* goandroid */
+/* small android */
+@media screen and (max-width: 240px) {
 
     .inner {
         position: relative;
@@ -920,4 +919,3 @@ Small Tablet
 
 }
 }
-*/
