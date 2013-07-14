@@ -872,9 +872,10 @@ Small Tablet
         padding: 1.5em 0em 0em 1.5em;
     }
 }
+
 /* goandroid  small android */
 
-/*@media screen and (max-width: 240px) {
+@media screen and (max-width: 240px) {
 
     .inner {
         position: relative;
@@ -915,5 +916,3 @@ Small Tablet
     }
 
 }
-}
-*/
