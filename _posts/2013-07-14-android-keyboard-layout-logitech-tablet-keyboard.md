@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  A custom android layout for logitech tablet keyboard
+title:  "Tutorial: A custom android layout for logitech tablet keyboard"
 published: true
 description: "In this tutorial, we will see howto make a custom layout for an android bluetooth keyboard and by the way, i will give you the logitech tablet keyboard layout to download"
 categories: [android]
@@ -184,7 +184,7 @@ where VVVV is the Vendor id and PPPP the product id.
 
 For exemple:
 
-{% highlight sh linenos=table %}cp Generic.kl Vendor_0446d_Product_b30a.kl
+{% highlight sh linenos=table %}cp Generic.kl Vendor_046d_Product_b30a.kl
 {% endhighlight %}
 
 
@@ -285,10 +285,10 @@ android :)
 
 Here you will find links to the kcm and kl files for the logitech tablet keyboard for ipad:
 
-<a class="download_link" href="/ressources/downloads/Vendor">Vendor_0446d_Product_b30a.kl</a>
+<a class="download_link" href="/ressources/downloads/Vendor_046d_Product_b30a.kl">Vendor_046d_Product_b30a.kl</a>
    
 
-<a class="download_link" href="/ressources/downloads/Vendor_0446d_Product_b30a.kcm">Vendor_0446d_Product_b30a.kcm</a>
+<a class="download_link" href="/ressources/downloads/Vendor_046d_Product_b30a.kcm">Vendor_046d_Product_b30a.kcm</a>
 
 
 [android_keycode_list]: http://developer.android.com/reference/android/view/KeyEvent.html "android keycode list"
