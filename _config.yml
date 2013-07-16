@@ -13,7 +13,7 @@ github: gustavepate
 url: http://gustavepate.github.io
 permalink: /blog/:year:month:day/:title/
 description: This a site about linux, python, web, quality and high availability
-keywords: python linux android blog gustave pate paté testing best practices high availability
+tags: [python, linux, android, blog, gustave, pate, paté, testing, best practices ,high availability]
 image: logo.png
 article: nil
 firstname: Gustave

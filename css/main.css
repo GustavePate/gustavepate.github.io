@@ -47,7 +47,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
 
 p { 
-    margin: 0px;
 }
 
 
@@ -97,7 +96,8 @@ h6 {
 }
 
 p {
-  margin: 0em 0 0em 0;
+    margin: 0px;
+    padding-bottom: 0.7em;
 }
 
 
@@ -110,6 +110,13 @@ strong {
   font-weight: bold;
 }
 
+small {
+  font-size: 0.7em;
+}
+
+big {
+  font-size: 1.2em;
+}
 
 
 pre {
@@ -441,7 +448,7 @@ Full-Width Styles
 #main_content_wrap {
   background: #f2f2f2;
   /* space for my footer */
-  padding-bottom: 10em;
+  padding-bottom: 11em;
 }
 
 #main_content {
@@ -451,7 +458,7 @@ Full-Width Styles
 
 #main_content h1 {
   padding-bottom: 0.3em;
-  font-size: 2em;
+  font-size: 1.6em;
   font-weight: 700;
   background: url('../ressources/images/bg_hr.png') repeat-x bottom;
   font-variant: small-caps;
@@ -459,21 +466,21 @@ Full-Width Styles
 
 #main_content h2 {
   padding-bottom: 0.3em;
-  font-size: 1.5em;
+  font-size: 1.3em;
   background: url('../ressources/images/bg_hr.png') repeat-x bottom;
   font-variant: small-caps;
 }
 
 #main_content h3 {
   padding-bottom: 0.3em;
-  font-size: 1.2em;
+  font-size: 1em;
   background: url('../ressources/images/bg_hr.png') repeat-x bottom;
   font-variant: small-caps;
 }
 
 #main_content h4 {
   padding-bottom: 0.3em;
-  font-size: 0.9em;
+  font-size: 0.8em;
   background: url('../ressources/images/bg_hr.png') repeat-x bottom;
   font-variant: small-caps;
 }
@@ -487,7 +494,7 @@ Full-Width Styles
 
 #footer_wrap {
   position: absolute; 
-  height: 9.5em;
+  height: 10em;
   bottom: 0;
   left: 0;
   border-top: 1px solid #111;
@@ -537,6 +544,8 @@ Full-Width Styles
 }
 
 #foot_contact p {
+    margin: 0px;
+    padding: 0px;
 }
 
 #foot_contact a  {
@@ -702,6 +711,38 @@ div.post {
     padding-left: 1em;
     font-weight: 300;
     font-variant: small-caps;
+}
+
+/** godownloawd **/
+
+.download_link {
+    display: block;
+  background: url('../ressources/images/icon_download.png') no-repeat 0% 90%;
+  padding-left: 30px;
+  margin-left: 4em;
+}
+
+.zip_download_link {
+  background: url(../ressources/images/sprite_download.png) no-repeat bottom left;
+}
+
+.tar_download_link {
+  display: block;
+  float: right;
+  width: 90px;
+  height:70px;
+  text-indent: -5000px;
+  overflow: hidden;
+  background: url(../ressources/images/sprite_download.png) no-repeat bottom right;
+  margin-left: 10px;
+}
+
+.zip_download_link:hover {
+  background: url(../ressources/images/sprite_download.png) no-repeat top left;
+}
+
+.tar_download_link:hover {
+  background: url(../ressources/images/sprite_download.png) no-repeat top right;
 }
 
 
@@ -916,3 +957,4 @@ Small Tablet
     }
 
 }
+

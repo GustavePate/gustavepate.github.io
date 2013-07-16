@@ -13,7 +13,7 @@
 {% if page.categories %}
 <meta name="keywords" content="{{page.categories | join: ','}}" />
 {% else %}
-<meta name="keywords" content="{{site.keywords | join: ','}}" />
+<meta name="keywords" content="{{site.tags | join: ','}}" />
 {% endif %}
 <!-- canonical url -->
 <link rel="canonical" href="{{site.url}}{{page.url}}"/>
@@ -91,9 +91,9 @@
         {% endfor %} 
     {% endif %} 
 
-    {% if page.keywords %} 
-        {% for keyword in page.keywords %} 
-            <meta content="{{keyword }}" property="article:tag"/> 
+    {% if page.tags %} 
+        {% for tag in page.tags %} 
+            <meta content="{{tag }}" property="article:tag"/> 
         {% endfor %} 
     {% endif %}
 

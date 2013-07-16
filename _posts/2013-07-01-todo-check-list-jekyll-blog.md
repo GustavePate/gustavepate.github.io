@@ -7,17 +7,15 @@ responsive blog well integrated with google, facebook and twitter."
 categories: [web]
 image: false
 article: yes
-keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check list, todo list]
+tags: [jekyll, blog, twitter, facebook, google, github, pages, howto, check list, todo list]
 ---
 
 ## Blog
-* [validate opengraph](https://developers.facebook.com/tools/debug)
-* [css validation](http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgustavepate.github.io)
+* use tags instead of keywords everywhere
 * rss feed / category
 * right bar style
 * images in post header and meta data
 * prettify the 404 error page
-* recheck validity xhtml and css
 * [google webmaster tools](http://www.google.com/webmasters/tools/)
 * write articles
 
@@ -33,11 +31,15 @@ keywords: [jekyll, blog, twitter, facebook, google, github, pages, howto, check 
 * ok: a tags/anchor should be relevant
 
 ### when everything is ok
+* recheck xhtml and css validity
+* recheck rich snippets, open graph and twitter card validity
 * [submit content to google](http://www.google.com/submityourcontent/)
 * [pass the sitemap.xml to google](https://www.google.com/webmasters/tools/home)
 
 
 ## Done
+* [validate opengraph](https://developers.facebook.com/tools/debug)
+* [css validation](http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgustavepate.github.io)
 * [xhtml validation](http://validator.w3.org/check?uri=http%3A%2F%2Fgustavepate.github.io)
 * seo
 * [attach sitre to your facebook account](https://developers.facebook.com/docs/insights/)
