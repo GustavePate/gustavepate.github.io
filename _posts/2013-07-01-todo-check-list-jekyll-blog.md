@@ -1,97 +1,107 @@
 ---
 layout: post
 title:  "Todo/check list for a new jekyll blog"
-date:   2013-06-29 19:55:05
-description: "This post is about things that need to be done in order to have a decent
-responsive blog well integrated with google, facebook and twitter."
+date:   2013-07-18 19:55:05
+description: "A check list for a new jekyll blog, decently responsive and well integrated with google, facebook and twitter."
 categories: [web]
 image: false
 article: yes
-tags: [jekyll, blog, twitter, facebook, google, github, pages, howto, check list, todo list]
+tags: [jekyll, blog, responsive, twitter, facebook, google, github, pages, howto, check list,
+todo list, best practices]
 ---
 
-## Blog
-* use tags instead of keywords everywhere
-* rss feed / category
-* right bar style
-* images in post header and meta data
-* prettify the 404 error page
-* [google webmaster tools](http://www.google.com/webmasters/tools/)
-* write articles
+* my toc
+{:toc}
 
-### [google search engine optimization guide](http://www.google.com/webmasters/docs/search-engine-optimization-starter-guide.pdf)
-* ok [schema keywords](http://schema.org/)
-* ok [add rel author links](http://www.vervesearch.com/blog/seo/how-to-implement-the-relauthor-tag-a-step-by-step-guide/)
-* todo: clear description on the front page
-* ok: check page title relevance
-* ok: accurate meta description tag
-* ok: accurate page url
-* ok:  [404 page with link to the main page + latest 10 articles](http://yizeng.me/2013/05/26/create-a-custom-jekyll-404-page/)
-* ok: alt for images
-* ok: a tags/anchor should be relevant
+#Context 
 
-### when everything is ok
+In order to refresh my web standart knowledge, I decided to open this blog a few weeks ago.
+I won't write another howto create a jekyll blog, nor I will enter in the details of adding a
+facebook +1 button.
+
+I will just list you all the tasks I had to complete in order to show you the current article,
+it was quite time consuming for me (I usually work on backends and I'm really not a front-end
+design person).
+
+Anyway, I learn a lot constructing this and wanted to share with you this todo list.
+Most of the tasks are not jekyll-centric and can be done for another blogging plateform. 
+
+Feel free to leave me a comment if you like it or if you think I miss something.
+
+I hope this will help you !
+
+# Things to (eventually) do
+
+## Google recommandations
+
+A quick summary of [google search engine optimization guide](http://www.google.com/webmasters/docs/search-engine-optimization-starter-guide.pdf)
+
+* Use [schema keywords](http://schema.org/)
+* Use [add rel author links](http://www.vervesearch.com/blog/seo/how-to-implement-the-relauthor-tag-a-step-by-step-guide/)
+* Have a clear description of your thing on the front page
+* Check page title relevance compare to the article content
+* Use accurate meta description tag
+* Use accurate page url (according the page content)
+* Have a cutom [404 page with a link to the main page + latest 10 articles](http://yizeng.me/2013/05/26/create-a-custom-jekyll-404-page/)
+* Use alt attributes for images
+* A tags text should be relevant (no [link](/))
+
+## Things I have done
+
+### Going social
+* [integrate twitter button](https://dev.twitter.com/docs/tweet-button)
+* [twitter cards](https://github.com/jpoehls/hulk-example/blob/master/_posts/2013/2013-02-02-jekyll-recipes-for-blog-meta-tags.md)
+* [attach site to facebook account](https://developers.facebook.com/docs/insights/)
+* [facebook open graph](http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/)
+* [validate opengraph](https://developers.facebook.com/tools/debug)
+* [integrate flatter](http://developers.flattr.net/button/)
+* [integrate google+](https://developers.google.com/+/web/+1button/)
+* [use a gravatar profile](http://fr.gravatar.com/)
+
+
+### Obey the rules
+* [css validation](http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgustavepate.github.io)
+* [xhtml validation](http://validator.w3.org/check?uri=http%3A%2F%2Fgustavepate.github.io)
+* [rss/atom validation](http://validator.w3.org/feed/check.cgi?url=http%3A%2F%2Fgustavepate.github.io%2Fatom.xml)
+* [test / validate twitter cards](https://dev.twitter.com/docs/cards/validation/validator)
+* [test social buttons](http://yourlittlehands.com/)
+
+### A bit of seo
+* [meta description](http://paradigmatic.streum.org/2011/02/generating-html-meta-data-with-jekyll/)
+* [add structred data](http://schema.org/)
+* [create a robots.txt](http://www.robotstxt.org/)
+* [create a sitemaps.xml](http://www.sitemaps.org/fr/)
+* [use permalink](http://jekyllrb.com/docs/permalinks/)
+* create an rss/atom feed
+
+### Test site responsivness
+
+* [test responsivness: matt](http://mattkersley.com/responsive/)
+* [test responsivness: responsinator](http://www.responsinator.com/?url=http%3A%2F%2Fgustavepate.github.io%2F)
+
+### Other things
+
+* [optimize css](https://github.com/geuis/helium-css)
+* [add basic analytics](http://www.google.com/analytics/)
+* [use icons](http://zurb.com/playground/social-webicons)
+* [use a favicon](http://www.favicon.cc/)
+* [add a comment system](http://disqus.com/)
+
+
+## Things I haven't done
+
+* [implement fallback for old browser](http://modernizr.com/)
+* [custom jekyll excerpt](https://coderwall.com/p/eazb7w)
+* [show the whole n last post on first page](/ressources/liquid.txt)
+* consider creating a rss feed per category
+* image specific sitemap.xml
+
+# When everything is ok
+
+Todo when you are ready to show the world your hard work.
+
 * recheck xhtml and css validity
 * recheck rich snippets, open graph and twitter card validity
 * [submit content to google](http://www.google.com/submityourcontent/)
 * [pass the sitemap.xml to google](https://www.google.com/webmasters/tools/home)
-
-
-## Done
-* [validate opengraph](https://developers.facebook.com/tools/debug)
-* [css validation](http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgustavepate.github.io)
-* [xhtml validation](http://validator.w3.org/check?uri=http%3A%2F%2Fgustavepate.github.io)
-* seo
-* [attach sitre to your facebook account](https://developers.facebook.com/docs/insights/)
-* [twitter cards](https://github.com/jpoehls/hulk-example/blob/master/_posts/2013/2013-02-02-jekyll-recipes-for-blog-meta-tags.md)
-* [validate twitter cards](https://dev.twitter.com/docs/cards/validation/validator)
-* [google author rich snippet](http://davidensinger.com/2013/05/setting-up-google-author-rich-snippets/)
-* [validate rich snippets](https://www.google.com/webmasters/tools/richsnippets)
-* [facebook open graph](http://davidensinger.com/2013/04/adding-open-graph-tags-to-jekyll/)
-* [test twitter card](https://dev.twitter.com/docs/cards/validation/validator)
-* [add structred data](http://schema.org/)
-* [meta description](http://paradigmatic.streum.org/2011/02/generating-html-meta-data-with-jekyll/)
-* feedburner (don't know if this is usefull)
-* [test_social_buttons](http://yourlittlehands.com/)
-* [robots.txt](http://www.robotstxt.org/)
-* [sitemaps.xml](http://www.sitemaps.org/fr/)
-* [add basic analytics](http://www.google.com/analytics/)
-* [test responsivness: matt](http://mattkersley.com/responsive/)
-* [test responsivness: responsinator](http://www.responsinator.com/?url=http%3A%2F%2Fgustavepate.github.io%2F)
-* [rss/atom validation](http://validator.w3.org/feed/check.cgi?url=http%3A%2F%2Fgustavepate.github.io%2Fatom.xml)
-* validation badges css html5
-* refaire le footer en (display: table)
-* refaire la barre social sans div under span (display: table)
-* footer gradient
-* [optimize css](https://github.com/geuis/helium-css)
-* publish
-* [flatter](http://developers.flattr.net/button/)
-* [icons](http://zurb.com/playground/social-webicons)
-* dev env
-* [favicon](http://www.favicon.cc/)
-* [g+](https://developers.google.com/+/web/+1button/)
-* [twitter](https://dev.twitter.com/docs/tweet-button)
-* permalink
-* date in post header
-* [gravatar link](http://fr.gravatar.com/)
-* [add a comment system](http://disqus.com/)
-* rss feed
-* post should display its categories
-* menu style
-* home page style
-* post style
-* move this to draft
-
-## Won't be done
-* [implement fallback](http://modernizr.com/)
-* image specific sitemap.xml ?
-* [custom excerpt](https://coderwall.com/p/eazb7w)
-* [show the n last post on first page](/ressources/liquid.txt)
-
-## Posts
-* posts:
-* android keyboard
-* android dev plateform
-* vim cheatsheet
-* vim plugins
-* python tooling
+* Have a beer !

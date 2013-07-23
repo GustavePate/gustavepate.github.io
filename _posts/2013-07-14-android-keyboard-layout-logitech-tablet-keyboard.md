@@ -9,6 +9,9 @@ image:  false
 article: yes
 ---
 
+* my toc
+{:toc}
+
 # context
 
 >We learn from our mistakes.  
@@ -212,8 +215,10 @@ Example: I assign __my__  `+/= ` key to the android `EQUALS` keycode.
 
 
 Here is the list of [android keycodes][android_keycode_list].
-Just remove the **KEYWORD_** befoere the constant names when using them in the kcm and kl
+Just remove the **KEYWORD_** before the constant names when using them in the kcm and kl
 files.
+
+Here you'll find [the complete keyayout android doc][more_keylayout] 
 
 __Warning:__ If you assign two scan codes to the same android keycode, the file will error.
 
@@ -235,6 +240,10 @@ print:
 - `+` when shift is activated
 - `}` when crtl or alt or meta is activated
 - label,number: just a label, i put the base value here
+
+Here you'll find [the complete keychars android doc][more_keychars] 
+
+Then this is [the unicode characters listing][more_unicode].
 
 # Testing
 
@@ -290,7 +299,9 @@ Here you will find links to the kcm and kl files for the logitech tablet keyboar
 
 <a class="download_link" href="/ressources/downloads/Vendor_046d_Product_b30a.kcm">Vendor_046d_Product_b30a.kcm</a>
 
-
+[more_keylayout]: http://source.android.com/devices/tech/input/key-layout-files.html "android documentation for keylayout files"
+[more_unicode]: http://en.wikipedia.org/wiki/List_of_Unicode_characters "wikipedia unicode listing"
+[more_keychars]: http://source.android.com/devices/tech/input/key-character-map-files.html "android documentation for keychars files"
 [android_keycode_list]: http://developer.android.com/reference/android/view/KeyEvent.html "android keycode list"
 [keyboard_test_apk]: http://m.tuxli.store.aptoide.com/app/market/name.boyle.chris.keytest/1/278797/Key%20Test "KeyTest apk"
 [hacker_keyboard]: https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard "Hacker keyboard"

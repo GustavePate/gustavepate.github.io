@@ -9,6 +9,8 @@ image:  false
 article: yes
 ---
 
+* my toc
+{:toc}
 
 ## original post
 
