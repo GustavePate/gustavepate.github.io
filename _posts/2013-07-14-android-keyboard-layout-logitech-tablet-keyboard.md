@@ -17,9 +17,7 @@ article: yes
 >We learn from our mistakes.  
     
 
-A few weeks ago, I ordered a logitech tablet keyboard and receive a <big> logitech  
-tablet keyboard</big> __<small>for ipad</small>__ instead of a <big>logitech tablet
-keyboard</big> __<small>for android</small>__.
+A few weeks ago, I ordered a logitech tablet keyboard and receive a <span class="big"> logitech tablet keyboard</span> __<small>for ipad</small>__ instead of a <span class="big">logitech tablet keyboard</span> __<small>for android</small>__.
 
 While testing it, i discovered that the keyboard received was an azerty keyboard (like i wanted to) but was recognized as a qwerty keyboard. Looking at it closely, I realized that the place of some keys on this keyboard was not matching the standard place for an azerty keyboard.
 

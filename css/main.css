@@ -114,7 +114,7 @@ small {
   font-size: 0.7em;
 }
 
-big {
+.big {
   font-size: 1.2em;
 }
 
@@ -680,29 +680,28 @@ ul.posts span {
     margin: 2.5em 0em 2em 0em;
 }
 
-#post_cat_list{
+.post_cat_list{
 
     margin: 0px;
     padding: 0px; 
 }
 
     
-#post_cat_list .keyword_list{ 
+.post_cat_list .keyword_list{ 
     margin: 0px;
     margin: 1em 0em 0em 0em;
     padding: 0.5em 0em 0em 0em; 
     font-size: 0.8em;
 }
 
-#post_cat_list .list_title{
+.post_cat_list .list_title{
     list-style: none;
     display: inline;
-    background-color: none;
     padding: 0.2em 0.2em 0.2em 0em; 
     margin: 0px;
 }
 
-#post_cat_list .keyword{ 
+.post_cat_list .keyword{ 
     
     list-style: none;
     display: inline;
