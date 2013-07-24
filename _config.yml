@@ -2,6 +2,8 @@ name: Gustave Paté's Hideout
 title: Gustave Pate
 tagline: Python, Linux, Stuff from outer space
 pygments: true
+safe: true
+lsi: false
 timezone: Europe/Paris
 author: Gustave Paté
 motto: Human Abstraction Layer
