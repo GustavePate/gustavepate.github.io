@@ -27,6 +27,8 @@ time, mark, audio, video {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  font-family:  Arial, sans-serif;
+  font-weight: 400;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -64,7 +66,8 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.5em 0;
   font-weight: 700;
   color:#222222;
-  font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;
+  /*font-family: 'Lucida Grande', 'Calibri', Helvetica, Arial, sans-serif;*/
+  font-family: 'Cagliostro', Arial, sans-serif;
   letter-spacing: -1px;
 }
 
@@ -294,6 +297,7 @@ Full-Width Styles
 }
 
 #project_title {
+  font-family:  Arial, sans-serif;
   margin: 0;
   color: #fff;
   font-size: 42px;
@@ -302,6 +306,7 @@ Full-Width Styles
 }
 
 #project_tagline {
+  font-family:  Arial, sans-serif;
   color: #fff;
   font-size: 24px;
   font-weight: 300;
