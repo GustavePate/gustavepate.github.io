@@ -10,8 +10,6 @@ tags: [jekyll, blog, responsive, twitter, facebook, google, github, pages, howto
 todo list, best practices]
 ---
 
-* my toc
-{:toc}
 
 #Context 
 
