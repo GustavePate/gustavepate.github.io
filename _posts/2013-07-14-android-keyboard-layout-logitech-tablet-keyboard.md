@@ -9,6 +9,9 @@ image:  false
 article: yes
 ---
 
+* my toc
+{:toc}
+
 # context
 
 >We learn from our mistakes.  
