@@ -3,13 +3,6 @@ layout: default
 ---
 
 <div id="post_header">
-    <ul>
-    <li>in [</li>
-    {% for cat in page.categories %}
-    <li class="postcat">{{cat}}</li>
-    {% endfor %}
-    <li>stuff ]</li>
-    </ul>
     <h1>{{ page.title }}</h1>
     <p class="date">{{ page.date | date_to_string }}</p>
     <div id="comment_excerpt"><a href="{{post.url}}#disqus_thread"></a></div>
@@ -19,9 +12,55 @@ layout: default
     {{page.description}}
     <br/><br/>
     {{ content }}
+
+
 </div>
 
 {% include social.html %}
+
+<! -- postfooter -->
+<div id='postfooter'>
+
+    <!-- categories -->
+    <div id="post_cat_list">
+        <ul class='keyword_list'>
+
+            {% assign listsize = (page.categories | size) %}
+
+            {% if listsize == 1 %}
+                    <li class='list_title'>Category:</li>
+            {%else%}
+                    <li class='list_title'>Categories:</li>
+            {%endif%}
+
+            {% for category in page.categories %}
+            <li class="keyword">
+            {{category}}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- tags -->
+    <div id="post_cat_list">
+        <ul class='keyword_list'>
+
+            {% assign listsize = (page.tags | size) %}
+
+            {% if listsize == 1 %}
+                    <li class='list_title'>Tag:</li>
+            {%else%}
+                    <li class='list_title'>Tags:</li>
+            {%endif%}
+            {% for tag in page.tags %}
+            <li class="keyword">
+            {{tag}}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div> <!-- post footer -->
 
 <div id="related_posts">
     <span>Maybe you'll like to read:</span>

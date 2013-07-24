@@ -4,7 +4,7 @@ title:  "My vim cheat sheet"
 published: true
 description: "This is yet another vim cheat sheet, don't forget it's available on github if you want to tweak it"
 categories: [linux]
-tags: [vim, cheat sheet, cheat,sheet]
+tags: [vim, shortcuts, cheat sheet]
 image:  false
 article: yes
 ---
