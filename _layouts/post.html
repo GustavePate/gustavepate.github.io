@@ -2,13 +2,19 @@
 layout: default
 ---
 
+<div id="post" itemscope itemtype="http://schema.org/Article">
+
 <div id="post_header">
-    <h1>{{ page.title }}</h1>
+    <h1 itemprop="name">{{ page.title }}</h1>
     <p class="date">{{ page.date | date_to_string }}</p>
     <div id="comment_excerpt"><a href="{{post.url}}#disqus_thread"></a></div>
+    <div itemprop="author" itemscope itemtype="http://schema.org/Person" id="author">
+        <div itemprop="name">{{site.author}}</div>
+    </div>
+    <div id="article_date" itemprop="datePublished">{{page.date | xml_schema}}</div> 
 </div>
 
-<div class="post">
+<div class="post" itemprop="articleBody">
     {{page.description}}
     <br/><br/>
     {{ content }}
@@ -72,5 +78,7 @@ layout: default
     {% endfor %}
     </ul>
 </div>
+
+</div> <!-- #post -->
 
 {% include disqus.html %}
