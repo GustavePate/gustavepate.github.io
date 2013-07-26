@@ -9,14 +9,17 @@
 {% else %}
 <meta name="description" content="{{site.description}}" />
 {% endif %}
+
 <!-- meta keywords -->
 {% if page.article %}
 <meta name="keywords" content="{{page.categories | join: ','}}" />
 {% else %}
 <meta name="keywords" content="{{site.sitetags | join: ','}}" />
 {% endif %}
+
 <!-- canonical url -->
 <link rel="canonical" href="{{site.url}}{{page.url}}"/>
+
 <!-- link to google plus profil -->
 <link rel="author" href="http://plus.google.com/115414251925827981582"/>
 <title>{{site.title}} - {{ page.title }}</title>
@@ -113,11 +116,6 @@
 {% else %} 
     <meta content="{{site.url }}/ressources/images/{{site.image}}" property="og:image"/> 
 {% endif %} 
-
-<!-- not allowed for a site or article -->
-<!--meta property="profile:first_name" content="{{site.firstname}}"/-->
-<!--meta property="profile:last_name" content="{{site.lastname}}"/-->
-<!--meta property="profile:gender" content="{{site.gender}}"/-->
 
 <!-- redirect 404 errors automatically -->
 {% if page.url == "/404.html" %}
