@@ -12,6 +12,8 @@ layout: default
         <div itemprop="name">{{site.author}}</div>
     </div>
     <div id="article_date" itemprop="datePublished">{{page.date | xml_schema}}</div> 
+    <div id="url" itemprop="url">{{site.url}}{{page.url}}</div> 
+
 </div>
 
 <div class="post" itemprop="articleBody">

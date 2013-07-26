@@ -661,6 +661,7 @@ ul.posts span {
     padding: 0.6em 0em 0em 0em;
 }
 
+/* microdata */
 #post_header #author{
     display: none;
 }
@@ -668,6 +669,11 @@ ul.posts span {
 #post_header #article_date{
     display: none;
 }
+
+#post_header #url{
+    display: none;
+}
+/* microdata */
 
 #post_header  a{
     text-decoration: none;
