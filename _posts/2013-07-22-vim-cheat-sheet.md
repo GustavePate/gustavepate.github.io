@@ -15,8 +15,8 @@ article: yes
 # Moves
 
 * `s` sentence
-* `w` word 
-* `W` WORD
+* `w` next word 
+* `b` previous word
 * `t` tag example\: ( `dat` deletes from `<xml-style-tag>` to `</xml-style-tag>`)
 * `p` paragraphe
 * `B` code block ( `{` ou `}` works only for C style code blocks

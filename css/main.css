@@ -83,7 +83,7 @@ h2 {
 }
 
 h3 {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 h4 {
@@ -468,16 +468,17 @@ Full-Width Styles
 
 #main_content h2 {
   padding-bottom: 0.3em;
-  font-size: 1.3em;
+  font-size: 1.4em;
   background: url('../ressources/images/bg_hr.png') repeat-x bottom;
   font-variant: small-caps;
 }
 
 #main_content h3 {
   padding-bottom: 0.3em;
-  font-size: 1em;
+  font-size: 1.2em;
   background: url('../ressources/images/bg_hr.png') repeat-x bottom;
   font-variant: small-caps;
+  letter-spacing: 1px;
 }
 
 #main_content h4 {

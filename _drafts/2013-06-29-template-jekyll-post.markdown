@@ -45,7 +45,7 @@ blockquote
 * page.url : {{page.url}}
 * site url: {{ site.url }}
 
-[Link_to_my_post]({% post_url 2013-07-01-todos%})
+[Link_to_my_post]({% post_url 2013-07-22-vim-cheat-sheet %})
 
 a python:
 
