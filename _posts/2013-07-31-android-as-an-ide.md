@@ -180,8 +180,7 @@ I hope this will help you, drop me a comment if you find it usefull.
 [busy_box]: https://play.google.com/store/apps/details?id=stericson.busybox "Busy Box for android"
 [bot_brew]: http://botbrew.com/ "Bot Brew an alternative to BusyBox"
 [vim_android]: https://play.google.com/store/apps/details?id=net.momodalo.app.vimtouch&hl=fr "Vim for android"
-[hacker_keyboard]:
-http://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard "Android Hacker Keyboard" 
+[hacker_keyboard]: http://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard "Android Hacker Keyboard" 
 [android_keyboard_mapping]: {% post_url 2013-07-14-android-keyboard-layout-logitech-tablet-keyboard %} "Customize a bluetooth keyboard layout on android"
 [rsi]: https://en.wikipedia.org/wiki/Repetitive_strain_injury 
 [cyanogen]: http://www.cyanogenmod.org/ "Cyanogenmod for android" 
