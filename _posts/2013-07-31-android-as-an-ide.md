@@ -2,8 +2,8 @@
 layout: post
 title:  "Android as an IDE"
 date:   2013-07-31 19:55:05
-description: "Tutorial about howto turn your android device in a efficent working ide" 
-categories: linux,android
+description: "Tutorial about howto turn your android device in a efficent working ide with ssh" 
+categories: ['linux','android']
 image: false
 article: yes
 tags: ['android','vim','ide','bash','ssh']
@@ -53,7 +53,7 @@ It will saves you time.
 
 Or you can read [this excellent guide][guide_root_galaxytab] (for Galaxy Tab 10.1 p7510 owners only)
 
-### Yes you need a bluetooth keyboard
+### Yes, you need a bluetooth keyboard
 
 I tried without it, you're twice as slow and even with [a good software keyboard][hacker_keyboard] you will suffer [RSI][rsi]
 So get buy yourself [a bluetooth keyboard][bluetooth_keyboard] and you will certainly need to
@@ -68,21 +68,30 @@ tweak its mappings. I write a complete tutorial on [android keyboard mapping] fo
 * [BusyBox][busy_box] My favorites unix tools back on android (grep, make, sed, awk,...) 
 * [SSHDroid][ssh_droid] Allow you to connect to your android device from your computer 
 
-### Intersting
+I strongly suggest you to install these 4, we will need them all to setup our ssh client
+connection.
 
-* [BotBrew][bot_brew] An more complete alternative to busy box (comes with languages such as * python or ruby)
+### Interesting
+
+* [BotBrew][bot_brew] An more complete alternative to busy box (comes with languages such as python or ruby) in fact the latest version allows to install a minimal debian and grant access to apt-get for extanding it. Sadly, I didn't manage to get it work (I didn't try really hard) 
 * [Vim for android][vim_android] Vim for android
+* [Terminal IDE][terminal_ide] A complete java command line java dev environnement (don't know if it's customizable)
+* [AIDE][aide] The most convincting java IDE on android, it doesn't convict me a lot.
 
-# Disappoinement
+## Disappoinement
 
 It turns out that there is no /home on android, so you can't store your configuration files
 effectively without having to pass them in CLI parameters.
+
+Good news is that [Android Terminal Emulator][android_terminal_emulator] allow you to specify a
+`/home` folder. Bad news is that home folder is not taken into account by some binaries (ex: ssh).
 
 I finally gave up on developping directly on android and prefer to ssh on a remote server (my
 desktop computer or a remote server).
 
 If I hadn't one under hand I think that I had finally installed a linux in a chroot on top on my
-android and accessed it with ssh/Android Terminal Emulator.
+android and accessed it with ssh/Android Terminal Emulator. Or maybe I had tried harder to make
+ [BotBrew][bot_brew] work.
 
 Anyway...
 
@@ -90,21 +99,20 @@ Anyway...
 
 But wait...
 
-SSH client is not provided by android nor by busybox nor by botbrew.
+SSH client is not provided by android nor by busybox.
 How do I ssh to my server ?
 
 There are many techniques including:
+
 1. Using a cynaogenmmod rom which comes with a pre-install ssh client
 1. using connect bot and be stuck with one only terminal in 8-colors 
-1. paying for some app that add a free ssh client to your android
+1. paying for some app that add a, btw, free ssh client to your android
 1. hijacking another app ssh client for free
 
-I will detail the third option here.
+I will detail the last option here.
 
-* Install [Dropbear][drop_bear] and start it
-
+* Install [SSHDroid][ssh_droid] and start it
 * remount your `/system` in `rw` mode: 
-
 {% highlight sh linenos=table %}
 su
 mount -o rw,remount -t yaffs2 /dev/block/mtdblock3 /system
@@ -113,7 +121,7 @@ mount -o rw,remount -t yaffs2 /dev/block/mtdblock3 /system
 * find ssh client executable
 
 {% highlight sh linenos=table %}su
-find / --name "*ssh*"
+find / --name "ssh"
 {% endhighlight %}
 
 * link this executable path in your `/system/bin`
@@ -121,31 +129,56 @@ find / --name "*ssh*"
 {% highlight sh linenos=table %}
 ln -s /path/you/find/with/the/find/cli/ssh /system/bin/ssh
 {% endhighlight %}
+{% highlight sh linenos=table %}
+# in my case:
+ln -s /data/data/berserker.android.apps.sshdroid/dropbear/ssh /system/bin/ssh
+{% endhighlight %}
 
+* check the right on you ssh link, normal users should be able to use it.
+I had to grant other user to access directories all the way down to
+`/data/data/berserker.android.apps.sshdroid/dropbear/ssh` by adding 5 rights to them or o+rx.
+(If you are not familiar with Unix permission  management go and [learn the chmod command
+line][chmod].)
+* A one point, you will need to generate ssh keys if you wan't a passwordless ssh connection to your server from your android device:
+
+
+{% highlight sh linenos=table %}
+cd /data/data/berserker.android.apps.sshdroid/dropbear/
+./dropbearkey -t rsa -f mykey > mykey.pub
+{% endhighlight %}
+
+* Your private key is `mykey`: put it in your home directory.
+* Your public is `mykey.pub`: put it in your server  `~/.ssh/authorized_keys` file.
 * By the way, add your server ip in `/etc/host`
 
-Okay, your big enough to find how to generate ssh keys and it's not the point of this post.
 Because there is no `/home` there is no  `.ssh` directory where to store your keys.
-As you don't wan't to pass it to the `ssh` command each time, consider create a bash script in
-your `/system/bin` or, as I do, add 
+As you don't wan't to pass it to the `ssh` command each time, consider create a shell script in
+your `/system/bin` or, as I do, add the following command to be executed when you launch [Android Terminal Emulator][android_terminal_emulator]
 
 {% highlight sh linenos=table %}
 ssh user@server -i /sdcard/home/id_rsa_db
 {% endhighlight %}
 
-to be executed when you launch [Android Terminal Emulator][android_terminal_emulator]
-
-Ohh !! I just see that you actually *can* specify a `/home` in the new version of Terminal
-Emulator but ssh just don't care ;)
-
-
+Done !
 
 # Conlusion
+
+Combing a great terminal manager like [Android Terminal Emulator][android_terminal_emulator]
+with [BusyBox][busy_box] and binaries from [SSHDroid][ssh_droid] allows to access a remote
+server in a very convenient way.
+
+Working on the server gives the  power of a real linux developpement environnement and allows
+to work in a 'Unix as an IDE' way from the tablet.
+
+The last thing that makes it possible to work on a tablet is the bluetooth keyboard without it
+productivity drops nastily !
+
+I hope this will help you, drop me a comment if you find it usefull.
+
 
 [ssh_droid]: https://play.google.com/store/apps/details?id=berserker.android.apps.sshdroid 
 [android_terminal_emulator]: https://play.google.com/store/apps/details?id=jackpal.androidterm
 [busy_box]: https://play.google.com/store/apps/details?id=stericson.busybox
-[drop_bear]: https://play.google.com/store/apps/details?id=me.shkschneider.dropbearserver
 [bot_brew]: http://botbrew.com/ "Bot Brew an alternative to BusyBox"
 [vim_android]: https://play.google.com/store/apps/details?id=net.momodalo.app.vimtouch&hl=fr "Vim for android"
 [hacker_keyboard]: http://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard 
@@ -154,5 +187,6 @@ Emulator but ssh just don't care ;)
 [cyanogen]: http://www.cyanogenmod.org/ 
 [bluetooth_keyboard]: http://www.logitech.com/en-us/product/tablet-keyboard-android-win8-rt "I like this one"
 [guide_root_galaxytab]: http://forum.xda-developers.com/showthread.php?t=2029664 "Howto root a galaxy tab p7510"
-
-
+[terminal_ide]: https://play.google.com/store/apps/details?id=com.spartacusrex.spartacuside
+[aide]: https://play.google.com/store/apps/details?id=com.aide.ui
+[chmod]: http://www.tldp.org/LDP/intro-linux/html/sect_03_04.html

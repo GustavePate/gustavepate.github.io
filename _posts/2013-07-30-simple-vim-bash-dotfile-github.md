@@ -3,7 +3,7 @@ layout: post
 title:  "A simple github repo for vim and bash dotfiles"
 date:   2013-07-30 19:55:05
 description: "Tutorial about howto make a simple github repo to handle your dotfiles" 
-categories: linux,web
+categories: ['linux','web']
 image: false
 article: yes
 tags: ['github', 'bash','vim','dotfiles']
@@ -32,7 +32,7 @@ Including plugins.
 The easier way to do it is maybe to store everything as it is stored on my `/home` in the repo.
 The install script will then symlink the repo's content to my `/home`.
 
-## repo organisation
+## Repo organisation
 
 {% highlight text linenos=table %}.
 repo_root
@@ -53,7 +53,7 @@ latest plugins version.
 
 We will see that in [this article last chapter](#working_with_submodules).
 
-# Think about how will you install your stuff
+# Think about the install script
 
 I don't want to change my install script each time I add a dotfile, a vim plugin or whatever.
 For my personnal purpose I think that a simple sequence like: 
@@ -163,9 +163,9 @@ Let's I wan't to automatically keep my vim plugins up-to-date.
 I can use [submodule][git_submodules] or [subtree][git_subtree].
 Submodules is the common way to go so I won't go in details of using subtree.
 
-## setup a submodule
+## Setup a submodule
 
-### add a submodule
+### Add a submodule
 
 First add a submodule to your git repo:
 
@@ -189,7 +189,7 @@ $ git status
 
 Notice how the change log only show you the directory of the submodule without all its content.
 
-### secure the submodule
+### Secure the submodule
 
 Notice the `.gitmodule` file.
 Let's take a look.
