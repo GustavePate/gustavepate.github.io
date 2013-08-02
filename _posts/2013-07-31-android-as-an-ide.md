@@ -167,8 +167,7 @@ Combing a great terminal manager like [Android Terminal Emulator][android_termin
 with [BusyBox][busy_box] and binaries from [SSHDroid][ssh_droid] allows to access a remote
 server in a very convenient way.
 
-Working on the server gives the  power of a real linux developpement environnement and allows
-to work in a 'Unix as an IDE' way from the tablet.
+Working on the server gives the  power of a real linux developpement environnement and allows to work in a [Unix as an IDE][unix_ide] way from the tablet.
 
 The last thing that makes it possible to work on a tablet is the bluetooth keyboard without it
 productivity drops nastily !
@@ -176,17 +175,19 @@ productivity drops nastily !
 I hope this will help you, drop me a comment if you find it usefull.
 
 
-[ssh_droid]: https://play.google.com/store/apps/details?id=berserker.android.apps.sshdroid 
-[android_terminal_emulator]: https://play.google.com/store/apps/details?id=jackpal.androidterm
-[busy_box]: https://play.google.com/store/apps/details?id=stericson.busybox
+[ssh_droid]: https://play.google.com/store/apps/details?id=berserker.android.apps.sshdroid "SSHDroid" 
+[android_terminal_emulator]: https://play.google.com/store/apps/details?id=jackpal.androidterm "Android Terinal emulator"
+[busy_box]: https://play.google.com/store/apps/details?id=stericson.busybox "Busy Box for android"
 [bot_brew]: http://botbrew.com/ "Bot Brew an alternative to BusyBox"
 [vim_android]: https://play.google.com/store/apps/details?id=net.momodalo.app.vimtouch&hl=fr "Vim for android"
-[hacker_keyboard]: http://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard 
-[android_keyboard_mapping]: {% post_url 2013-07-14-android-keyboard-layout-logitech-tablet-keyboard %}
+[hacker_keyboard]:
+http://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard "Android Hacker Keyboard" 
+[android_keyboard_mapping]: {% post_url 2013-07-14-android-keyboard-layout-logitech-tablet-keyboard %} "Customize a bluetooth keyboard layout on android"
 [rsi]: https://en.wikipedia.org/wiki/Repetitive_strain_injury 
-[cyanogen]: http://www.cyanogenmod.org/ 
+[cyanogen]: http://www.cyanogenmod.org/ "Cyanogenmod for android" 
 [bluetooth_keyboard]: http://www.logitech.com/en-us/product/tablet-keyboard-android-win8-rt "I like this one"
-[guide_root_galaxytab]: http://forum.xda-developers.com/showthread.php?t=2029664 "Howto root a galaxy tab p7510"
-[terminal_ide]: https://play.google.com/store/apps/details?id=com.spartacusrex.spartacuside
-[aide]: https://play.google.com/store/apps/details?id=com.aide.ui
-[chmod]: http://www.tldp.org/LDP/intro-linux/html/sect_03_04.html
+[guide_root_galaxytab]: http://forum.xda-developers.com/showthread.php?t=2029664 "How to root a stock galaxy tab 10.1"
+[terminal_ide]: https://play.google.com/store/apps/details?id=com.spartacusrex.spartacuside "Terminal IDE"
+[aide]: https://play.google.com/store/apps/details?id=com.aide.ui "AIDE Android IDE"
+[chmod]: http://www.tldp.org/LDP/intro-linux/html/sect_03_04.html "Unix permissions"
+[unix_ide]: http://blog.sanctum.geek.nz/series/unix-as-ide/ "Unix as an IDE"
