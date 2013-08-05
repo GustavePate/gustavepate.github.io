@@ -12,14 +12,29 @@ article: yes
 * my toc
 {:toc}
 
-# Moves
+# Actions (verbs)
+
+* `y` yank or copy
+* `d` delete or cut
+* `c` cut / cut and go to insert mode
+* `p` paste
+
+# Moves (adjectives)
+
+These can be applied to previously definend actions
 
 * `s` sentence
 * `w` next word
+* `W` next space-separated word
 * `b` previous word
-* `t` tag example\: ( `dat` deletes from `<xml-style-tag>` to `</xml-style-tag>`)
-* `p` paragraphe
-* `B` code block ( `{` ou `}` works only for C style code blocks
+* `B` begining of / previous word (space separated)
+* `e` end of word
+* `E` end of / next word (space separated)
+* `tx` to next character `x` excluding `x`
+* `Tx` to previous character `x` excluding `x`
+* `fx` to move to the next instance of a `x` character on the current line, (; to repeat)
+* `Fx` to move to the previous instance of a `x` character on the current line (
+; to repeat)
 * `)` sentence end
 * `}` paragraph end
 * `$` line end
@@ -28,21 +43,7 @@ article: yes
 * `G` end of file
 * `gD` go to the current method definition
 * `%` on a `(` or `\[` go to the ending brace `)` or `\]` otherwise go to the preceding one.
-* `:25` go to line 25
 
-## Parenthèsis
-
-* `(` ou `)` -  ( ... )
-* `[` ou `]` - \[ .. \]
-* `<` ou `>` -  <..>
-* `{` ou `}` -
-
-# Marks
-
-* `ma` mark the actual position with the letter `a`
-* ``a`` go to mark `a`
-* `'a`  go to the beginning of the `a` marked line
-* `:marks` show the mark listing
 
 # Scrolling
 
@@ -75,7 +76,6 @@ Exemples:
 * `bufdo w` write all buffers
 * `bufdo bd` close all buffers
 
-
 ## Windows
 
 * `:vsplit` or `:vsp` vertical split
@@ -89,32 +89,17 @@ Exemples:
 * `Ctrl + w` then `R`  exchange viewport in reverse order
 * `Ctrl + w` then `q`  close the actual viewport
 
+# Search / Replace
 
-# External commands
+* `:s/toto//` search the first occurence of `toto` on the line
+* `:s/toto//g` search all occurences of `toto` on the line
+* `:%s/toto//g` search all occurences of `toto` for each line of the buffer (or opened file)
+* `n` go to the next occurence of what was previously searched
+* `:s/toto/tata/` replace the first occurence of `toto` on the line by  `tata`
+* `:s/toto/tata/g` replace all occurences of `toto` on the line by `tata`
+* `:%s/toto/tata/g` replace all occurences of `toto` in the buffer by `tata`
+* regex allowed ;)
 
-* `:!cmd` executes a linux command (ex\: `:!echo 'toto'`)
-If vim runs at project root:
-* `:make` works
-* `:make target` works great
-
-
-# Usefull Tricks
-
-* `ctx` delete everything until character `x` and enter insert mode
-* `dtx` delete everything until character `x` and don't enter insert mode
-* `da(` inside a parenthesis, deletes parenthesis and inner content
-* `da"` inside a string, deletes character string content and quotes
-* `ytx` copy until character `x`
-* `Shift+j` or `J` add the next line to the end of the current line
-* `Shift+k` or `K` show the manual page (manual like in `man`)  for the word under the cursor
-* `~` modify the under the cursor character case
-* `.` repeat the last command
-* `:u` undo
-* `Crtl + r` redo
-* `Crtl + A` increment "under the cursor" number
-* `Crtl + X` decrement "under the cursor" number
-* `r` replace a letter
-* `R` enter replace mode
 
 # Mapping
 
@@ -130,16 +115,117 @@ Exemples:
 * `:iab c Class` typing  `c` then `space`  will be expanded to `Class`
 
 
-# Search / Replace
+## Macros
 
-* `:s/toto//` search the first occurence of `toto` on the line
-* `:s/toto//g` search all occurences of `toto` on the line
-* `:%s/toto//g` search all occurences of `toto` for each line of the buffer (or opened file)
-* `n` go to the next occurence of what was previously searched
-* `:s/toto/tata/` replace the first occurence of `toto` on the line by  `tata`
-* `:s/toto/tata/g` replace all occurences of `toto` on the line by `tata`
-* `:%s/toto/tata/g` replace all occurences of `toto` in the buffer by `tata`
-* regex allowed ;)
+1. Start with recording: qq
+1. Do stuff
+1. Stop recording: q
+1. Repeat: @q (the first time), @@ after that.
+1. Repeat 20 times: 20@@
+
+
+# External commands
+
+* `:!cmd` executes a linux command (ex\: `:!echo 'toto'`)
+If vim runs at project root:
+* `:make` works
+* `:make target` works great
+* `:.! ls` dumps ls result in current window
+* `:r! ls` dumps ls result in current window
+* `:%!sort` sorts the entire buffer (works best with awk or sed)
+
+## Register
+
+To use when working in the : mode
+* `a - z` the named registers
+* `"` the unnamed register, containing the text of the last delete or yank
+* `%` the current file name
+* `#` the alternate file name
+* `*` the clipboard contents (X11: primary selection)
+* `+` the clipboard contents
+* `/` the last search pattern
+* `:` the last command-line
+* `.` the last inserted text
+* `-` the last small (less than a line) delete "
+
+Ex: when you :%s/toto/tata/g to replace toto by tata in the whole buffer
+
+# Marks
+
+* `ma` mark the actual position with the letter `a`
+* ``a`` go to mark `a`
+* `'a`  go to the beginning of the `a` marked line
+* `:marks` show the mark listing
+
+# TODO sort this
+
+* `t` tag example\: ( `dat` deletes from `<xml-style-tag>` to `</xml-style-tag>`)
+* `p` paragraphe
+* `B` code block ( `{` ou `}` works only for C style code blocks
+* `:25` go to line 25
+
+# Usefull Tricks
+
+* `.` repeat the last text changing command
+* `*`  on a word to search for the next instance
+* `#`  on a word to search for the previous instance
+* `ctx` delete everything until character `x` and enter insert mode
+* `dtx` delete everything until character `x` (x exclude) and don't enter insert mode
+* `dfx` delete everything until character `x` (x include) and don't enter insert mode
+* `da(` inside a parenthesis, deletes parenthesis and inner content
+* `da"` inside a string, deletes character string content and quotes
+* `ytx` copy until character `x`
+* `Shift+j` or `J` add the next line to the end of the current line
+* `Shift+k` or `K` show the manual page (manual like in `man`)  for the word under the cursor
+* `~` modify the under the cursor character case
+* `.` repeat the last command
+* `:u` undo
+* `Crtl + r` redo
+* `Crtl + A` increment "under the cursor" number
+* `Crtl + X` decrement "under the cursor" number
+* `r` replace a letter
+* `R` enter replace mode
+* `:w !sudo tee %` edit the file anywway if you forgot to call vim with the sudo command
+* `:earlier 15m` reverts the document back to how it was 15 minutes ago.
+* `:later` revert previous command
+* `diw` to delete the current word
+* `di(` to delete within the current parens
+* `di"` to delete the text between the quotes
+* `ci(okok` remplace current parenthesis content with okok
+* `C`  cut the rest of the line and switch to insert mod
+* `xp` toggle cuurent char position with the following one
+* `xP` copy a character
+* `ddp`   move current line one row down
+* `bde` delete current word
+* `bye` copies current word
+* `d$` (or `D`) delete until the end of line
+* `g;` goto last insert mode cursor position and stay in normal mode
+* `gi` goto last insert mode cursor position and enter insert mode
+* `:g/pattern/y` A copy all lines containing pattern in a buffer you can then paste
+* `:sh` open shell and mask vim Crtl-D kills the shell and brings vim back !
+* `gf` goto file which name is under the cursor
+* `%TOhtml` Creates an html rendering of the current file.
+* `gg=G` Corrects indentation for entire file
+
+
+
+#Plugins
+
+## TComment
+
+### Commands
+
+* `gc{motion}`    Toggle comments (for small comments within one line the &filetype_inline style will be used, if defined)
+* `gc<Count>c{motion}`  Toggle comment text with count argument (see |tcomment#Comment()|)
+* `gcc`           Toggle comment for the current line
+* `gC{motion}`    Comment region
+* `gCc`  Comment the current line
+
+### keymapping
+* `<c-_><c-_>` Toggle comment on  line
+* `<c-_>p` Comment the current inner paragraph
+* `<c-_>i` TCommentInline
+
 
 Tell me about your favorite shortcut in the comments, I will add them !
 
