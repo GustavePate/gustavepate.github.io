@@ -71,6 +71,7 @@ a big list with paragraphs:
   three lines
   three lines
 
+
 This is a rule (hr):
 
 ------

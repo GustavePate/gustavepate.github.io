@@ -15,27 +15,27 @@ article: yes
 # Moves
 
 * `s` sentence
-* `w` next word 
+* `w` next word
 * `b` previous word
 * `t` tag example\: ( `dat` deletes from `<xml-style-tag>` to `</xml-style-tag>`)
 * `p` paragraphe
 * `B` code block ( `{` ou `}` works only for C style code blocks
 * `)` sentence end
 * `}` paragraph end
-* `$` line end 
+* `$` line end
 * `^` line beginning
 * `gg` file beginning
 * `G` end of file
 * `gD` go to the current method definition
-* `%` on a `(` or `\[` go to the ending brace `)` or `\]` otherwise go to the preceding one. 
+* `%` on a `(` or `\[` go to the ending brace `)` or `\]` otherwise go to the preceding one.
 * `:25` go to line 25
 
 ## Parenthèsis
 
 * `(` ou `)` -  ( ... )
-* `[` ou `]` - \[ .. \] 
+* `[` ou `]` - \[ .. \]
 * `<` ou `>` -  <..>
-* `{` ou `}` - 
+* `{` ou `}` -
 
 # Marks
 
@@ -59,9 +59,9 @@ article: yes
 * `Ctrl+v` enter rectangular visual mode (bloc mode)
 
 Exemple, to ident 3 lines:
-* `Shift-v`  
-* select 3 lines  
-* `==`  
+* `Shift-v`
+* select 3 lines
+* `==`
 
 ## Buffers (not tabs !)
 
@@ -71,7 +71,7 @@ Exemple, to ident 3 lines:
 * `:ls` list buffers
 * `:bufdo cmd` execute cmd on all open buffers
 
-Exemples: 
+Exemples:
 * `bufdo w` write all buffers
 * `bufdo bd` close all buffers
 
@@ -79,12 +79,13 @@ Exemples:
 ## Windows
 
 * `:vsplit` or `:vsp` vertical split
-* `:split` or `:sp` horizontal split 
-* `Crtl + w` then  `arrow` navigate through windows
+* `:split` or `:sp` horizontal split
+* `Crtl + w` then  `w` navigate through windows
+* `Crtl + w` then  `arrow` navigate to arrow directed window
 * `Ctrl + w` then `+`  increase the actual viewport size
 * `Ctrl + w` then `-`  decrease the actual viewport size
 * `Ctrl + w` then `=`  equalize viewports sizes
-* `Ctrl + w` then `r`  exchange  viewport positions 
+* `Ctrl + w` then `r`  exchange  viewport positions
 * `Ctrl + w` then `R`  exchange viewport in reverse order
 * `Ctrl + w` then `q`  close the actual viewport
 
@@ -114,16 +115,16 @@ If vim runs at project root:
 * `Crtl + X` decrement "under the cursor" number
 * `r` replace a letter
 * `R` enter replace mode
- 
+
 # Mapping
 
 Test in buffer before putting them in your .vimrc to create your own shortcuts
 * `:map`  insert + normal mode
 * `:nmap` normal mode
 * `:imap` interactive mode
-* `:iab`  substitue 
+* `:iab`  substitue
 
-Exemples: 
+Exemples:
 * `:nmap <tab> :bnext <CR>` pressing `tab` will go to the next buffer in normal mode only
 * `:map <C-n> :vsp<CR>` pressing `Crtl + n`  will vertical split the current viewport in normal and insert mode
 * `:iab c Class` typing  `c` then `space`  will be expanded to `Class`
@@ -134,10 +135,10 @@ Exemples:
 * `:s/toto//` search the first occurence of `toto` on the line
 * `:s/toto//g` search all occurences of `toto` on the line
 * `:%s/toto//g` search all occurences of `toto` for each line of the buffer (or opened file)
-* `n` go to the next occurence of what was previously searched 
-* `:s/toto/tata/` replace the first occurence of `toto` on the line by  `tata`  
-* `:s/toto/tata/g` replace all occurences of `toto` on the line by `tata`  
-* `:%s/toto/tata/g` replace all occurences of `toto` in the buffer by `tata`  
+* `n` go to the next occurence of what was previously searched
+* `:s/toto/tata/` replace the first occurence of `toto` on the line by  `tata`
+* `:s/toto/tata/g` replace all occurences of `toto` on the line by `tata`
+* `:%s/toto/tata/g` replace all occurences of `toto` in the buffer by `tata`
 * regex allowed ;)
 
 Tell me about your favorite shortcut in the comments, I will add them !

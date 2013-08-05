@@ -2,7 +2,7 @@
 layout: post
 title:  "A simple github repo for vim and bash dotfiles"
 date:   2013-07-30 19:55:05
-description: "Tutorial about howto make a simple github repo to handle your dotfiles" 
+description: "Tutorial about howto make a simple github repo to handle your dotfiles"
 categories: ['linux','web']
 image: false
 article: yes
@@ -56,7 +56,7 @@ We will see that in [this article last chapter](#working_with_submodules).
 # Think about the install script
 
 I don't want to change my install script each time I add a dotfile, a vim plugin or whatever.
-For my personnal purpose I think that a simple sequence like: 
+For my personnal purpose I think that a simple sequence like:
 
 1. Get latest change `git pull`
 1. Eventually commit local changes `git push`
@@ -76,7 +76,7 @@ Indeed `./install.sh` can make the git pull/push for me ;)
 echo 'Dotfiles -  http://gustavepate.github.io/'
 
 HOME_DIR=~  #For testing purpose
-SYNC_ROOT=./dotfiles 
+SYNC_ROOT=./dotfiles
 SYNC_FILES=$SYNC_ROOT/*
 
 SCRIPT_FULL_PATH=$(readlink -f $0)
@@ -93,7 +93,7 @@ fi
 
 
 #Command must be run from the repo root
-if [ ! -e $SYNC_ROOT'/.bashrc' ] 
+if [ ! -e $SYNC_ROOT'/.bashrc' ]
 then
     echo "install must be execute from the repo root"
     exit 1
@@ -122,7 +122,7 @@ do
     #create /home equiv for repo file
     H_FILE=$HOME_DIR'/'$FILE
 
-    #create backup path 
+    #create backup path
     TIMESTAMP=`date +%d%m%Y-%H%M%S`
     H_FILE_BACKUP=$HOME_DIR'/'$FI'.'$TIMESTAMP'.bck'
 
@@ -132,7 +132,7 @@ do
 
         #if a link, delete it
         if [ -L $H_FILE ];then
-            rm $H_FILE   
+            rm $H_FILE
             echo $H_FILE" rmed...........ok"
 
         #if a dir or a file => mv
@@ -173,8 +173,20 @@ First add a submodule to your git repo:
 git submodule add  https://github.com/tpope/vim-fugitive dotfiles/.vim/bundle/vim-fugitive
 {% endhighlight %}
 
+Run it __without__ a trailing slash !
+
 It clones `https://github.com/tpope/vim-fugitive`
 in the directory `dotfiles/.vim/bundle/vim-fugitive`
+
+{% highlight bash linenos=table %}
+# OK: adds the submodule
+git add local/path
+
+# NO !!!! adds all the files in the submodule directly into your repository
+git add local/path/
+{% endhighlight %}
+
+Then you can:
 
 {% highlight bash linenos=table %}
 $ git status
@@ -213,15 +225,69 @@ You can tweak in in order to ignore changes made by you in the submodules.
   ignore = dirty
 {% endhighlight %}
 
-### Refreshing submodules
+### Untracked change
 
-To refresh get uptodate submodules all you have to do is to type: 
+If, on commit, git notifies you with a Untracked Content Error
+
+{% highlight bash linenos=table %}
+# On branch master
+# Changes not staged for commit:
+# (use "git add ..." to update what will be  committed)
+# (use "git checkout -- ..." to discard changes in working directory) # (commit or
+# discard the untracked or modified content in submodules) #
+# modified: bundle/snipmate
+# (untracked content)
+{% endhighlight %}
+
+Then the solution is to:
+
+{% highlight bash linenos=table %}
+cd submodule/path
+git add /previouly/detected/untrack/content
+git commit -a -m "untracked"
+{% endhighlight %}
+
+
+## Refreshing submodules
+
+To refresh get uptodate submodules all you have to do is to type:
 
 {% highlight bash linenos=table %}
 git submodule init
 git submodule update
+git submodule foreach git pull origin master
 {% endhighlight %}
 
+
+Then you will wan't to commit the changes which lead us to the following function
+
+{% highlight bash linenos=table %}
+# get latest submodules
+function submodules_latest {
+    # init update and retrieve last head of each submodule
+    git submodule init
+    git submodule update
+    git submodule foreach git pull origin master
+
+    # Commit the submodule changes
+    git add .
+    git commit -a -m "Update submodules to the latest version"
+    git push origin master
+}
+{% endhighlight %}
+
+## Delete/remove a submodule
+
+Because, one day, you wil wa't to do it. Here are the steps to perform in ordrer to remove
+a submodule.
+
+1. Delete the relevant section from the .gitmodules file.
+1. Stage the .gitmodules changes git add .gitmodules
+1. Delete the relevant section from .git/config.
+1. Run git rm --cached path_to_submodule (no trailing slash).
+1. Delete the entry in .git/modules. Run rm -rf .git/modules/submodule_name
+1. Commit.
+1. Delete the now untracked submodule files. Run rm -rf path_to_submodule
 
 # Conclusion
 
@@ -235,5 +301,5 @@ I hope this will help you !
 [github_dotfiles]: http://dotfiles.github.io/ "github dotfiles doc"
 [dotfiles_repo]: https://github.com/GustavePate/dotfiles "my github dotfiles repository"
 [git_submodules]: http://speirs.org/blog/2009/5/11/understanding-git-submodules.html "detail explanations on submodule"
-[git_subtree]: http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/ "howto subtree" 
+[git_subtree]: http://blogs.atlassian.com/2013/05/alternatives-to-git-submodule-git-subtree/ "howto subtree"
 [install_sh]: https://github.com/GustavePate/dotfiles/blob/master/install.sh "dotfiles install script"
