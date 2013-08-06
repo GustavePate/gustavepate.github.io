@@ -138,7 +138,7 @@ Exemples:
 * `:iab c Class` typing  `c` then `space`  will be expanded to `Class`
 
 
-## Macros
+# Macros
 
 1. Start with recording: qq
 1. Do stuff
@@ -157,7 +157,7 @@ If vim runs at project root:
 * `:r! ls` dumps ls result in current window
 * `:%!sort` sorts the entire buffer (works best with awk or sed)
 
-## Register
+# Register
 
 To use when working in the : mode
 * `a - z` the named registers
@@ -230,8 +230,6 @@ Ex: when you :%s/toto/tata/g to replace toto by tata in the whole buffer
 * `%TOhtml` Creates an html rendering of the current file.
 * `gg=G` Corrects indentation for entire file
 
-
-
 #Plugins
 
 ## TComment
@@ -244,11 +242,21 @@ Ex: when you :%s/toto/tata/g to replace toto by tata in the whole buffer
 * `gC{motion}`    Comment region
 * `gCc`  Comment the current line
 
-### keymapping
+### Keymapping
 * `<c-_><c-_>` Toggle comment on  line
 * `<c-_>p` Comment the current inner paragraph
 * `<c-_>i` TCommentInline
 
+## Jedi
+
+### Keymapping
+
+* `<leader>g` goto command
+* `<leader>d` get definition command
+* `K` show PyDoc
+* `<leader>r` refactoring rename item
+* `<leader>o` list all names that are related (have the same origin)
+* `<C-Space>` autocompletion command
 
 Tell me about your favorite shortcut in the comments, I will add them !
 
