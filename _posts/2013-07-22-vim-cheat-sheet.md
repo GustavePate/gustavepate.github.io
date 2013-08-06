@@ -38,11 +38,34 @@ These can be applied to previously definend actions
 * `)` sentence end
 * `}` paragraph end
 * `$` line end
-* `^` line beginning
+* `^` first non-blank character of line
+* `0` start of line
 * `gg` file beginning
 * `G` end of file
 * `gD` go to the current method definition
 * `%` on a `(` or `\[` go to the ending brace `)` or `\]` otherwise go to the preceding one.
+
+# Normal mode to insert mode
+* `i` start insert mode at cursor
+* `I`  insert at the beginning of the line
+* `a` append after the cursor
+* `A` append at the end of the line
+* `o` open (append) blank line below current line (no need to press return)
+* `O` open blank line above current line
+* `ea` append at end of word
+* `cc` change (delete and go in insert mode) an entire line
+* `cw` change (replace) to the end of word
+* `c$` change (replace) to the end of line
+* `ciw` replace word
+* `ci)` replace parenthesis cent
+* `s` delete character at cursor and enter insert mode
+* `S` delete line at cursor and substitute text (same as cc)
+
+# Undo / Redo / Repeat
+
+* `u` undo
+* `Ctrl+r` redo
+* `.` repeat last command
 
 
 # Scrolling
@@ -197,7 +220,7 @@ Ex: when you :%s/toto/tata/g to replace toto by tata in the whole buffer
 * `xP` copy a character
 * `ddp`   move current line one row down
 * `bde` delete current word
-* `bye` copies current word
+* `bye` copies current word same as `yiw`
 * `d$` (or `D`) delete until the end of line
 * `g;` goto last insert mode cursor position and stay in normal mode
 * `gi` goto last insert mode cursor position and enter insert mode
