@@ -155,15 +155,71 @@ done
 [Here is the current source][install_sh]
 
 
-# Working with submodules
+# Working with sub-repos
 
-For the moment, my git repo only contains copies of others repository.
-Let's I wan't to automatically keep my vim plugins up-to-date.
+For the moment, my git repo only contains clones of others repository.
 
-I can use [submodule][git_submodules] or [subtree][git_subtree].
-Submodules is the common way to go so I won't go in details of using subtree.
+Here are my needs:
+* I wan't to automatically keep my vim plugins up-to-date.
+* On a fresh computer I don't want to manually add all my vim plugins
 
-## Setup a submodule
+One can use [submodule][git_submodules] or [subtree][git_subtree].
+
+__Edit 2013-08-13: __ giving up submodules
+
+Submodule is the common way to go but they are a pain to delete.
+
+I tried these a little before giving up. Indeed I was changing my vim plugins list quickly
+at this time and it was not a sustainable solutions. See [the necessary steps to delete a
+submodule]({{page.url}}#delete_a_submodule) and you will agree with me ;)
+
+So I tried to use subtree but my ubuntu 12.04 don't come with the necessary git version.
+I gave up and stay with git clone for the moment.
+
+For the record, you will find notes on the git subtree and git submodules below.
+
+
+# Conclusion
+
+Et voilà ! Here is a link to [my own github dotfiles repo][dotfiles_repo]
+where you can find the latest version of the [install script][install_sh] I currently use.
+It took me a little more than a hour to make it working (including typing this article).
+
+I hope this will help you !
+
+
+## Appendix I: Setup a subtree
+
+
+### Adding a remote
+
+{% highlight bash linenos=table %}
+git remote add -f minibufexpl.vim https://github.com/fholgado/minibufexpl.vim
+{% endhighlight %}
+
+### Fetch a repo as a subtree
+
+{% highlight bash linenos=table %}
+git subtree add --prefix dotfiles/.vim/bundle/minibufexpl.vim minibufexpl.vim master --squash
+{% endhighlight %}
+
+### Update a subtree
+
+{% highlight bash linenos=table %}
+git fetch minibufexpl.vim master
+git subtree pull --prefix dotfiles/.vim/bundle/minibufexpl.vim minibufexpl.vim master --squash
+{% endhighlight %}
+
+### Delete a subtree
+
+{% highlight bash linenos=table %}
+#TODO
+{% endhighlight %}
+
+## Appendix II: Setup a submodule
+
+I warn you about it subtrees have proven to be more relevant to my needs than submodule.
+But, anyway, here's some submodule documentation if you need it.
 
 ### Add a submodule
 
@@ -248,7 +304,7 @@ git commit -a -m "untracked"
 {% endhighlight %}
 
 
-## Refreshing submodules
+### Refreshing submodules
 
 To refresh get uptodate submodules all you have to do is to type:
 
@@ -276,9 +332,9 @@ function submodules_latest {
 }
 {% endhighlight %}
 
-## Delete/remove a submodule
+### Delete a submodule
 
-Because, one day, you wil wa't to do it. Here are the steps to perform in ordrer to remove
+Because, one day, you will wan't to do it. Here are the steps to perform in ordrer to remove
 a submodule.
 
 1. Delete the relevant section from the .gitmodules file.
@@ -289,13 +345,6 @@ a submodule.
 1. Commit.
 1. Delete the now untracked submodule files. Run rm -rf path_to_submodule
 
-# Conclusion
-
-Et voilà ! Here is a link to [my own github dotfiles repo][dotfiles_repo]
-where you can find the latest version of the [install script][install_sh] I currently use.
-It took me a little more than a hour to make it working (including typing this article).
-
-I hope this will help you !
 
 [github_doc]: https://help.github.com/articles/create-a-repo "create a repo github doc"
 [github_dotfiles]: http://dotfiles.github.io/ "github dotfiles doc"
