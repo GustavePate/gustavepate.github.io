@@ -28,7 +28,11 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   font-family:  'Open Sans', sans-serif;
-  color: #333333;
+  font-size: 16px;
+  line-height: 1.35;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: #222222;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -186,9 +190,6 @@ body {
   /*color:#373737;*/
   /* todo: must be the same as content background !!!! */
   background: #f2f2f2;
-  font-size: 16px;
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
 }
 
 

@@ -13,7 +13,6 @@ tags: ['secure', 'linux', 'server']
 * my toc
 {:toc}
 
-
 # Accounts
 
 ## Change Root Password
@@ -150,6 +149,10 @@ Unattended-Upgrade::Allowed-Origins {
 };
 {% endhighlight %}
 
+## Modify sshd default port
+
+###TODO
+
 ## TODO: Logwatch
 
 {% highlight bash linenos=table %}
@@ -186,6 +189,7 @@ iptables -A INPUT -p tcp -i eth0 --dport ssh -j ACCEPT
 iptables -A INPUT -p tcp -m tcp --dport 4000 -j ACCEPT
 # webserver
 iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
 {% endhighlight %}
 
 ### Accept ping
@@ -218,10 +222,207 @@ iptables -L --line-numbers
 iptables -D OUTPUT 2
 {% endhighlight %}
 
-
 ### Reapply fail2ban rules
 
 {% highlight bash linenos=table %}
 sudo /etc/init.d/fail2ban restart
 {% endhighlight %}
 
+###  persists rules
+
+Your iptables configuration will be erased at each reboot if you don't persist it.
+
+There are [many ways to do it][iptables_persist].
+
+My favorite:
+
+{% highlight bash linenos=table %}
+#save actual rules
+sudo iptables-save > /etc/iptables.rules
+#create a script to be launch on boot before activating networking
+sudo vim /etc/network/if-pre-up.d/firewallup
+{% endhighlight %}
+
+Script content:
+
+{% highlight bash linenos=table %}
+#!/bin/sh
+iptables-restore < /etc/iptables.rules
+exit 0
+{% endhighlight %}
+
+Make your script executable and test it
+{% highlight bash linenos=table %}
+sudo chmod +x /etc/network/if-pre-up.d/firewallup
+sudo sh /etc/network/if-pre-up.d/firewallup
+#check your tables
+sudo iptables -L -n -v
+#if everything is ok, test it for real
+sudo reboot
+{% endhighlight %}
+
+Done with the firewall
+
+# Mysql
+
+
+{% highlight bash linenos=table %}
+vim /etc/mysql/my.cnf
+#add this line in the [mysqld] section
+[mysqld]
+# disable network access
+skip-networking
+# disable access to local files
+local-infile=0
+
+{% endhighlight %}
+
+reboot service to check for configuration error
+
+{% highlight bash linenos=table %}
+service mysql restart
+#check for errors in the log
+tail -f /var/log/mysql/error.log
+{% endhighlight %}
+
+## Change root password
+
+{% highlight bash linenos=table %}
+shell> mysqladmin -u username -p password newpass
+{% endhighlight %}
+
+## drop test database
+
+{% highlight bash linenos=table %}
+mysql> drop database test;
+{% endhighlight %}
+
+## drop default user with no login/password
+
+
+{% highlight bash linenos=table %}
+mysql> use mysql;
+mysql> select * from user where user="";
+mysql> delete from user where user="";
+mysql> flush privileges;
+{% endhighlight %}
+
+
+## Rename root account
+
+{% highlight bash linenos=table %}
+mysql> use mysql;
+mysql> update user set user="new_user" where user="root";
+mysql> flush privileges;
+{% endhighlight %}
+
+## Delete history
+
+{% highlight bash linenos=table %}
+cat /dev/null > ~/.mysql_history
+{% endhighlight %}
+
+## Then create specific user and database for your apps
+
+{% highlight bash linenos=table %}
+$ mysqladmin create dbname -u root -p
+mysql> CREATE USER 'new_user'@'localhost' IDENTIFIED BY 'new_password';
+mysql> GRANT ALL PRIVILEGES ON dbname TO 'dbname'@'localhost' WITH GRANT OPTION;
+mysql> GRANT ALL ON dbname.* TO 'new_user'@'somehost';
+mysql> flush privileges;
+#check grants
+mysql> SHOW GRANTS FOR 'owncloud'@'localhost';
+{% endhighlight %}
+
+# Definitively stop useless services
+
+# TODO: https
+
+sudo a2enmod ssl
+sudo service apache2 restart
+sudo openssl req -nodes -days 364 -newkey rsa:1024 -keyout /etc/apache2/yourserver.key -out /etc/apache2/yourserver.csr
+sudo chmod o-rw /etc/apache2/yourserver.key
+
+sudo a2enmod rewrite
+sudo a2dismod rewrite
+
+# Openvpn
+
+Follow tutorial for vpn configuation.
+
+## IPtables rules for openvpn
+
+{% highlight bash linenos=table %}
+# Change port
+iptables -A INPUT -p udp -m udp --dport 4000 -j ACCEPT
+# Enable nat
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+# activate forwarding
+echo "1" > /proc/sys/net/ipv4/ip_forward
+# Allow traffic initiated from VPN to access eth0
+iptables -I FORWARD -i tun0 -o eth0 -s 10.8.0.0/24  -m conntrack --ctstate NEW -j ACCEPT
+# Allow established traffic to pass back and forth
+iptables -I FORWARD -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+{% endhighlight %}
+
+## Check that your dns traffic is going through the vpn
+
+{% highlight bash linenos=table %}
+sudo tcpdump -i tun0 dst port 53
+{% endhighlight %}
+
+if not it may flow through your box
+
+{% highlight bash linenos=table %}
+sudo tcpdump -i tun0 dst port 53
+{% endhighlight %}
+
+Check that the follwing options are enabled in openvpn server.conf
+
+{% highlight bash linenos=table %}
+push "redirect-gateway bypass-dhcp"
+push "dhcp-option DNS 208.67.222.222"
+{% endhighlight %}
+
+## Make sure vpn restart on server reboot
+
+{% highlight bash linenos=table %}
+vim /etc/default/openvpn
+#uncomment AUTOSTART where server is the name of your server configuration aka server.conf
+AUTOSTART="server"
+{% endhighlight %}
+
+## A valid server.conf
+
+{% highlight bash linenos=table %}
+/etc/openvpn# cat server.conf
+port 2000
+proto udp
+dev tun
+ca /etc/openvpn/ca.crt
+cert /etc/openvpn/server.crt
+key /etc/openvpn/server.key  # This file should be kept secret
+dh dh1024.pem
+server 10.8.0.0 255.255.255.0
+ifconfig-pool-persist ipp.txt
+comp-lzo
+push "redirect-gateway bypass-dhcp"
+#opendns
+push "dhcp-option DNS 208.67.220.220"
+push "dhcp-option DNS 208.67.222.222"
+keepalive 10 120
+max-clients 3
+persist-key
+persist-tun
+status /etc/openvpn/openvpn-status.log
+log /var/log/openvpn.log
+verb 4
+{% endhighlight %}
+
+## Client conf
+
+On ubuntu, use NetworkManager
+
+[TODO](http://www.alsacreations.com/tuto/lire/622-Securite-firewall-iptables.html)
+
+[iptables_persist]: https://help.ubuntu.com/community/IptablesHowTo#Configuration_on_startup

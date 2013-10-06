@@ -14,10 +14,19 @@ article: yes
 
 # Actions (verbs)
 
-* `y` yank or copy
+* `y` yank or copy to default register `""` and also to `"0` register
 * `d` delete or cut
 * `c` cut / cut and go to insert mode
 * `p` paste
+* `"0p` paste from the copy register (even if you have `dd` or `x` in the meantime)
+
+# clipboard
+
+`vim --version | grep clipboard` should display `+xterm_clipboard` otherwise recompile your vim with the appropraites libs.
+
+* `"*p` paste the middle-click buffer
+* `"+p` paste the `Crtl+C` buffer
+* works with `y` and `d` too...
 
 # Moves (adjectives)
 
@@ -229,6 +238,7 @@ Ex: when you :%s/toto/tata/g to replace toto by tata in the whole buffer
 * `gf` goto file which name is under the cursor
 * `%TOhtml` Creates an html rendering of the current file.
 * `gg=G` Corrects indentation for entire file
+* `vip` select in visual mode the entire paragraph
 
 #Plugins
 
