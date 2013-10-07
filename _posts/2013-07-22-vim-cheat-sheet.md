@@ -30,7 +30,7 @@ article: yes
 
 # Moves (adjectives)
 
-These can be applied to previously definend actions
+These can be applied to previously defined actions
 
 * `s` sentence
 * `w` next word
@@ -123,6 +123,7 @@ Exemples:
 
 # Search / Replace
 
+* `#` in normal mode, search backward for the previously word under cursor occurence
 * `:s/toto//` search the first occurence of `toto` on the line
 * `:s/toto//g` search all occurences of `toto` on the line
 * `:%s/toto//g` search all occurences of `toto` for each line of the buffer (or opened file)
