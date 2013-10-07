@@ -5,7 +5,7 @@ published: true
 description: "In this tutorial, we will see howto make a custom layout for an android bluetooth keyboard and by the way, i will give you the logitech tablet keyboard layout to download"
 categories: [android]
 tags: [logitech, tablet, keyboard, layout, android, howto, tutorial]
-image: "/ressources/images/keyboardbanner.png"
+image: "keyboardbanner.png"
 article: yes
 ---
 

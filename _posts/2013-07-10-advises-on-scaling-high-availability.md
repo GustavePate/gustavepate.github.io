@@ -6,7 +6,7 @@ description: Things to do in order to lower maintenance on a high availability a
 categories: [web]
 tags: [scaling, high availability, low maintenance]
 article: yes
-image: "/ressources/images/ladder.png"
+image: "ladder.png"
 ---
 
 Couldn't have said it better, i agree with every line.

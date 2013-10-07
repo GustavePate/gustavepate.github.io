@@ -8,7 +8,7 @@ image: false
 article: yes
 tags: [jekyll, blog, responsive, twitter, facebook, google, github, pages, howto, check list,
 todo list, best practices]
-image: "/ressources/images/checklist.jpg"
+image: "checklist.jpg"
 ---
 
 * my toc
