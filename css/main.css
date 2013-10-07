@@ -523,8 +523,8 @@ Full-Width Styles
      line-height:0px;
  }
 
-#foot_me {
-    color: #ffffff;
+#foot_me  p {
+    color: #bbbbbb;
 }
 
 #foot_middle a {
