@@ -4,7 +4,7 @@ title:  "Android as an IDE"
 date:   2013-07-31 19:55:05
 description: "Tutorial about howto turn your android device in a efficent working ide with ssh"
 categories: ['linux','android']
-image: false
+image: "/ressources/images/androidide.png"
 article: yes
 tags: ['android','vim','ide','bash','ssh']
 ---

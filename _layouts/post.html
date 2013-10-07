@@ -11,8 +11,10 @@ layout: default
     <div itemprop="author" itemscope itemtype="http://schema.org/Person" id="author">
         <div itemprop="name">{{site.author}}</div>
     </div>
-    <div id="article_date" itemprop="datePublished">{{page.date | xml_schema}}</div> 
-    <div id="url" itemprop="url">{{site.url}}{{page.url}}</div> 
+    <div id="article_date" itemprop="datePublished">{{page.date | xml_schema}}</div>
+    <div id="url" itemprop="url">{{site.url}}{{page.url}}</div>
+    <img itemprop="image" src="{{site.url}}{{page.image}}" alt="post banner"/>
+    <!--<img id="postimage" itemprop="image" url="{{site.url}}{{page.image}}" alt="post banner"/>-->
 
 </div>
 

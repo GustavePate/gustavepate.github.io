@@ -6,6 +6,7 @@ description: "Howto synchronize Lychee and owncloud, dropbox or any directory"
 categories: web
 image: false
 article: yes
+image: "/ressources/images/lycheesync.png"
 tags: ['python', 'linux', 'server', 'web', 'lychee', 'owncloud', 'dropbox', 'synchronization']
 ---
 

@@ -5,7 +5,7 @@ published: true
 description: "This is yet another vim cheat sheet, don't forget it's available on github if you want to tweak it"
 categories: [linux]
 tags: [vim, shortcuts, cheat sheet]
-image:  false
+image: "/ressources/images/vim.png"
 article: yes
 ---
 

@@ -4,7 +4,7 @@ title:  "A simple github repo for vim and bash dotfiles"
 date:   2013-07-30 19:55:05
 description: "Tutorial about howto make a simple github repo to handle your dotfiles"
 categories: ['linux','web']
-image: false
+image: "/ressources/images/dotfiles.png"
 article: yes
 tags: ['github', 'bash','vim','dotfiles']
 ---

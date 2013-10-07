@@ -8,12 +8,13 @@ image: false
 article: yes
 tags: [jekyll, blog, responsive, twitter, facebook, google, github, pages, howto, check list,
 todo list, best practices]
+image: "/ressources/images/checklist.jpg"
 ---
 
 * my toc
 {:toc}
 
-#Context 
+#Context
 
 In order to refresh my web standart knowledge, I decided to open this blog a few weeks ago.
 I won't write another howto create a jekyll blog, nor I will enter in the details of adding a
@@ -24,7 +25,7 @@ it was quite time consuming for me (I usually work on backends and I'm really no
 design person).
 
 Anyway, I learn a lot constructing this and wanted to share with you this todo list.
-Most of the tasks are not jekyll-centric and can be done for another blogging plateform. 
+Most of the tasks are not jekyll-centric and can be done for another blogging plateform.
 
 Feel free to leave me a comment if you like it or if you think I miss something.
 

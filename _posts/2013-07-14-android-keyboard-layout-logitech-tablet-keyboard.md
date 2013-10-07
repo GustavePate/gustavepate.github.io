@@ -5,7 +5,7 @@ published: true
 description: "In this tutorial, we will see howto make a custom layout for an android bluetooth keyboard and by the way, i will give you the logitech tablet keyboard layout to download"
 categories: [android]
 tags: [logitech, tablet, keyboard, layout, android, howto, tutorial]
-image:  false
+image: "/ressources/images/keyboardbanner.png"
 article: yes
 ---
 
@@ -14,8 +14,8 @@ article: yes
 
 # context
 
->We learn from our mistakes.  
-    
+>We learn from our mistakes.
+
 
 A few weeks ago, I ordered a logitech tablet keyboard and receive a <span class="big"> logitech tablet keyboard</span> __<small>for ipad</small>__ instead of a <span class="big">logitech tablet keyboard</span> __<small>for android</small>__.
 
@@ -49,7 +49,7 @@ I recommand you:
 1. each physical key owns a unique scan code
 1. to this scan code we will assign an android identifier: the key code
 1. then we will assign a behaviour to each of these key code (what to print when the key is press with
-crtl, shift...) 
+crtl, shift...)
 
 For each of theses three steps we will use:
 1. [the scan code tester][keyboard_test_apk] and a paper blueprint
@@ -113,7 +113,7 @@ key TAB {
 With this two file examples you have the whole layout for the SPACE key.
 
 Understood ? quite simple. The problem  is there are plenty of keys on your keyboard and the
-scan codes are not really easy to  memorise. 
+scan codes are not really easy to  memorise.
 
 # creating a custom keylayout
 
@@ -140,12 +140,12 @@ Now you have something like this:
 
 ## create the keychars and keylayout files
 
-First, one word of advice: __never ever edit Generic files, never!__ 
+First, one word of advice: __never ever edit Generic files, never!__
 
 Generic files are the last fallback when everything is broken, if you break them you have no fallback left.
 
 We will need to create our custom files, for this we have to know specific information about
-your bluetooth keyboard. 
+your bluetooth keyboard.
 
 For this log in to a terminal on your android device and type:
 
@@ -216,7 +216,7 @@ Here is the list of [android keycodes][android_keycode_list].
 Just remove the **KEYWORD_** before the constant names when using them in the kcm and kl
 files.
 
-Here you'll find [the complete keyayout android doc][more_keylayout] 
+Here you'll find [the complete keyayout android doc][more_keylayout]
 
 __Warning:__ If you assign two scan codes to the same android keycode, the file will error.
 
@@ -239,13 +239,13 @@ print:
 - `}` when crtl or alt or meta is activated
 - label,number: just a label, i put the base value here
 
-Here you'll find [the complete keychars android doc][more_keychars] 
+Here you'll find [the complete keychars android doc][more_keychars]
 
 Then this is [the unicode characters listing][more_unicode].
 
 # Testing
 
-The only way i found to test this, is to:   
+The only way i found to test this, is to:
 
 1. power off the bluetooth keyboard
 1. desactivate bluetooth on the device
@@ -293,7 +293,7 @@ android :)
 Here you will find links to the kcm and kl files for the logitech tablet keyboard for ipad:
 
 <a class="download_link" href="/ressources/downloads/Vendor_046d_Product_b30a.kl">Vendor_046d_Product_b30a.kl</a>
-   
+
 
 <a class="download_link" href="/ressources/downloads/Vendor_046d_Product_b30a.kcm">Vendor_046d_Product_b30a.kcm</a>
 
@@ -303,7 +303,7 @@ Here you will find links to the kcm and kl files for the logitech tablet keyboar
 [android_keycode_list]: http://developer.android.com/reference/android/view/KeyEvent.html "android keycode list"
 [keyboard_test_apk]: http://m.tuxli.store.aptoide.com/app/market/name.boyle.chris.keytest/1/278797/Key%20Test "KeyTest apk"
 [hacker_keyboard]: https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard "Hacker keyboard"
-[terminal_emulator]: https://play.google.com/store/apps/details?id=jackpal.androidterm "Terminal Emulator" 
+[terminal_emulator]: https://play.google.com/store/apps/details?id=jackpal.androidterm "Terminal Emulator"
 [busy_box]: https://play.google.com/store/apps/details?id=stericson.busybox "Busy box"
 [keyboard_blue_print_png]: /ressources/images/keyboard_layout.png "My keyboard keylayout blueprint"
-[keyboard_picture_png]: /ressources/images/logitech_tablet_keyboard.png "My logitech tablet keyboard for android" 
+[keyboard_picture_png]: /ressources/images/logitech_tablet_keyboard.png "My logitech tablet keyboard for android"
