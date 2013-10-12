@@ -27,6 +27,8 @@ article: yes
 * `<C-r>a` paste the a register
 * `<C-r>*` paste the system clipoard (mouse selection)
 * `<C-r>+` paste the system clipoard (copy)
+* `<C-r>.` paste last inserted text
+* `<C-r>%` paste the current file name
 
 # clipboard
 
