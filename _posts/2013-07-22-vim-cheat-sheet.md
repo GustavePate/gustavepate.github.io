@@ -20,9 +20,17 @@ article: yes
 * `p` paste
 * `"0p` paste from the copy register (even if you have `dd` or `x` in the meantime)
 
+# Insert mode paste
+
+* `<C-r>0` paste the yank register
+* `<C-r>"` paste the default register
+* `<C-r>a` paste the a register
+* `<C-r>*` paste the system clipoard (mouse selection)
+* `<C-r>+` paste the system clipoard (copy)
+
 # clipboard
 
-`vim --version | grep clipboard` should display `+xterm_clipboard` otherwise recompile your vim with the appropraites libs.
+`vim --version | grep clipboard` should display `+xterm_clipboard` otherwise [recompile your vim][compile_vim] with the appropriates libs.
 
 * `"*p` paste the middle-click buffer
 * `"+p` paste the `Crtl+C` buffer
@@ -271,3 +279,4 @@ Ex: when you :%s/toto/tata/g to replace toto by tata in the whole buffer
 
 Tell me about your favorite shortcut in the comments, I will add them !
 
+[compile_vim]: {% post_url 2013-10-10-compiling-vim-enable-python-system-copy-paste  %} "Compile vim on ubuntu for system clipboard support"
