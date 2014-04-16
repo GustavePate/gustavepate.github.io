@@ -9,6 +9,8 @@ tags: [vim, python, clipboard, compile, howto]
 image: "vimcompile.png"
 ---
 
+Edit 2014-04-16: added configure option for compilation without x
+
 Here is a quick reminder of how-to compile vim for:
 * python support
 * ruby support
@@ -57,9 +59,20 @@ cd ..
     --with-x --with-compiledby="GustavePate" \
     --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/ \
     --with-ruby-command=/usr/bin/ruby
+{% endhighlight %}
 
+** OR without X support **
+
+{% highlight text linenos=table %}
+./configure  --with-features=huge --enable-pythoninterp=yes -enable-rubyinterp=yes  -enable-cscope --enable-fail-if-missing --enable-multibyte
+--enable-fontset -with-compiledby="GustavePate" --with-python-config-dir=/usr/lib/python2.7/config/ --with-ruby-command=/usr/bin/ruby --disable-gui
+--without-x
+{% endhighlight %}
+
+then
+
+{% highlight text linenos=table %}
 make
-
 sudo make install
 {% endhighlight %}
 

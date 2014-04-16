@@ -12,6 +12,9 @@ tags: ['android','vim','ide','bash','ssh']
 * my toc
 {:toc}
 
+
+** edit 2014-04-12 ** added a ssh client binary and change the remount /system partition instructions
+
 # Context
 
 As I was suffering from backpain for months, I needed to work on personnal projects without
@@ -86,8 +89,7 @@ effectively without having to pass them in CLI parameters.
 Good news is that [Android Terminal Emulator][android_terminal_emulator] allow you to specify a
 `/home` folder. Bad news is that home folder is not taken into account by some binaries (ex: ssh).
 
-I finally gave up on developping directly on android and prefer to ssh on a remote server (my
-desktop computer or a remote server).
+I finally gave up on developping directly on android and prefer to ssh on a remote server (my desktop computer or a remote server).
 
 If I hadn't one under hand I think that I had finally installed a linux in a chroot on top on my
 android and accessed it with ssh/Android Terminal Emulator. Or maybe I had tried harder to make
@@ -115,14 +117,18 @@ I will detail the last option here.
 * remount your `/system` in `rw` mode:
 {% highlight sh linenos=table %}
 su
-mount -o rw,remount -t yaffs2 /dev/block/mtdblock3 /system
+cat /proc/mounts
+# search for the system line (or grep 'system' /proc/mounts)
+mount -o rw,remount -t ext4 /dev/block/platform/sdhci-tegra.3/by-num/p4 /system
 {% endhighlight %}
 
-* find ssh client executable
+* find an ssh client
 
 {% highlight sh linenos=table %}su
 find / --name "ssh"
 {% endhighlight %}
+
+or you can download it [here][sshclient]
 
 * link this executable path in your `/system/bin`
 
@@ -175,6 +181,7 @@ productivity drops nastily !
 I hope this will help you, drop me a comment if you find it usefull.
 
 
+
 [ssh_droid]: https://play.google.com/store/apps/details?id=berserker.android.apps.sshdroid "SSHDroid"
 [android_terminal_emulator]: https://play.google.com/store/apps/details?id=jackpal.androidterm "Android Terinal emulator"
 [busy_box]: https://play.google.com/store/apps/details?id=stericson.busybox "Busy Box for android"
@@ -190,3 +197,4 @@ I hope this will help you, drop me a comment if you find it usefull.
 [aide]: https://play.google.com/store/apps/details?id=com.aide.ui "AIDE Android IDE"
 [chmod]: http://www.tldp.org/LDP/intro-linux/html/sect_03_04.html "Unix permissions"
 [unix_ide]: http://blog.sanctum.geek.nz/series/unix-as-ide/ "Unix as an IDE"
+[sshclient]: ../ressources/ssh

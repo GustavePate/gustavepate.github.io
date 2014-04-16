@@ -151,7 +151,15 @@ Unattended-Upgrade::Allowed-Origins {
 
 ## Modify sshd default port
 
-###TODO
+    sudo vim /etc/ssh/sshd_config
+
+Look for this line:
+
+    Port 22
+
+Change it !
+
+    sudo service sshd restart
 
 ## TODO: Logwatch
 
@@ -190,6 +198,8 @@ iptables -A INPUT -p tcp -m tcp --dport 4000 -j ACCEPT
 # webserver
 iptables -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT
 iptables -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT
+# ftp
+iptables -A INPUT -p tcp -m tcp --dport 21 -j ACCEPT
 {% endhighlight %}
 
 ### Accept ping

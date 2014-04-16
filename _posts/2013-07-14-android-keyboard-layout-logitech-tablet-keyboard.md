@@ -171,8 +171,11 @@ In my case:
 Then, __you absolutely need to be root to do this__ we have to mount the `/system` mount path to
 enable read/write operations:
 
-{% highlight sh linenos=table %}su
-mount -o rw,remount -t yaffs2 /dev/block/mtdblock3 /system
+{% highlight sh linenos=table %}
+su
+cat /proc/mounts
+# search for the system line (or grep 'system' /proc/mounts)
+mount -o rw,remount -t ext4 /dev/block/platform/sdhci-tegra.3/by-num/p4 /system
 {% endhighlight %}
 
 Then we will copy the generic files to our custom ones:
