@@ -13,7 +13,7 @@ common web technologies (IRL, I'm more a back-end person).
 
 I hope you'll find valuable information in this mess.
 
-Love, 
+With Love,
 
 Gustave
 
