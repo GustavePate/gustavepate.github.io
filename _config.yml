@@ -21,3 +21,4 @@ article: nil
 firstname: Gustave
 lastname: Paté
 gender: male
+markdown: kramdown
