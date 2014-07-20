@@ -61,7 +61,7 @@ cd ..
     --with-ruby-command=/usr/bin/ruby
 {% endhighlight %}
 
-** OR without X support **
+**OR without X support**
 
 {% highlight text linenos=table %}
 ./configure  --with-features=huge --enable-pythoninterp=yes -enable-rubyinterp=yes  -enable-cscope --enable-fail-if-missing --enable-multibyte
