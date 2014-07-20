@@ -1,1 +1,1 @@
-curl -#L https://raw.githubusercontent.com/GustavePate/dotfiles/master/dotfiles/.bashrc.minimal -o ~/.bashrc && . ~/.bashrc
+curl -#L https://raw.githubusercontent.com/GustavePate/dotfiles/master/dotfiles/.bashrc.minimal -o ~/.bashrc && . ~/.bashrc; echo "ok"
