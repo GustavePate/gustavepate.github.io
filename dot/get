@@ -1,4 +1,12 @@
+#!/bin/bash
+
+# do it by hand if a proxy is needed
+# then edit minimal.sh to add proxy setting before launching it
+# way of doing it:
+#  --proxy <[protocol://][user:password@]proxyhost[:port]>
+# or -x http://proxy_server:proxy_port --proxy-user username:password
+
+
 curl -#L https://raw.githubusercontent.com/GustavePate/dotfiles/master/minimal.sh -o ~/minimal.sh 
 chmod 764 ~/minimal.sh 
 ~/minimal.sh
-echo "ok"
