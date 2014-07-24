@@ -1,1 +1,1 @@
-curl -#L https://raw.githubusercontent.com/GustavePate/dotfiles/master/minimal.sh -o ~/minimal.sh && chmod 764 ~/minimal.sh && echo "ok"
+curl -#L https://raw.githubusercontent.com/GustavePate/dotfiles/master/minimal.sh -o ~/minimal.sh && chmod 764 ~/minimal.sh && ~/minimal.sh && echo "ok"
