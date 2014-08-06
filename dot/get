@@ -11,4 +11,4 @@
 #curl -#L https://raw.githubusercontent.com/GustavePate/dotfiles/master/minimal.sh -o ~/minimal.sh
 curl -#L https://github.com/GustavePate/dotfiles/tarball/master -o ~/dot.tgz
 # decompress it and execute
-mkdir dot && tar -xzf ~/dot.tgz -C dot --strip-components 1 && chmod 764 ~/dot/minimal.sh && ~/dot/minimal.sh
+mkdir dot && tar -xzf ~/dot.tgz -C dot --strip-components 1 && rm ~/dot.tgz && chmod 764 ~/dot/minimal.sh && ~/dot/minimal.sh
