@@ -10,9 +10,5 @@
 # get the full archive
 #curl -#L https://raw.githubusercontent.com/GustavePate/dotfiles/master/minimal.sh -o ~/minimal.sh
 curl -#L https://github.com/GustavePate/dotfiles/tarball/master -o ~/dot.tgz
-# decompress it
-tar -xzf ~/dot.tgz
-#change rights
-chmod 764 ~/dot/minimal.sh
-#execute
-~/dot/minimal.sh
+# decompress it and execute
+mkdir dot && tar -xzf ~/dot.tgz -C dot --strip-components 1 && chmod 764 ~/dot/minimal.sh && ~/dot/minimal.sh
