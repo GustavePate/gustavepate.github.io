@@ -7,6 +7,12 @@
 # or -x http://proxy_server:proxy_port --proxy-user username:password
 
 
-curl -#L https://raw.githubusercontent.com/GustavePate/dotfiles/master/minimal.sh -o ~/minimal.sh
-chmod 764 ~/minimal.sh
-~/minimal.sh
+# get the full archive
+#curl -#L https://raw.githubusercontent.com/GustavePate/dotfiles/master/minimal.sh -o ~/minimal.sh
+curl -#L https://github.com/dpatti/dotfiles/tarball/master -o ~/dot.tgz
+# decompress it
+tar -xzf ~/dot.tgz
+#change rights
+chmod 764 ~/dot/minimal.sh
+#execute
+~/dot/minimal.sh
